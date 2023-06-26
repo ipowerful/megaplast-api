@@ -11,5 +11,5 @@ class Color extends Model
 
     protected $fillable = ['name', 'alias'];
 
-    // protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 }
