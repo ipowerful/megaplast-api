@@ -12,9 +12,9 @@ class ColorController extends Controller
         return Color::all();
     }
 
-    public function show($id)
+    public function show(Color $color)
     {
-        return Color::find($id);
+        return $color;
     }
 
     public function store(Request $request)
