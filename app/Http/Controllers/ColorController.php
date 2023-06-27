@@ -21,4 +21,18 @@ class ColorController extends Controller
     {
         return Color::create($request->all());
     }
+
+    public function update(Request $request, Color $color)
+    {
+        $color->update($request->all());
+
+        return response()->json($color, 200);
+    }
+
+    public function destroy(Color $color)
+    {
+        $color->delete();
+
+        return response()->json(null, 204);
+    }
 }
