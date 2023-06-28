@@ -19,6 +19,11 @@ class ColorController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string|max:100|unique:colors,name',
+            'alias' => 'required|string|max:20|unique:colors,alias',
+        ]);
+
         return Color::create($request->all());
     }
 
@@ -31,6 +36,10 @@ class ColorController extends Controller
 
     public function destroy(Color $color)
     {
+        $request->validate([
+            'color' => 'required|integer|unique:colors,id',
+        ]);
+
         $color->delete();
 
         return response()->json(null, 204);
