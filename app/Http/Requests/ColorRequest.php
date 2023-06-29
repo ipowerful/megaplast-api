@@ -47,16 +47,16 @@ class ColorRequest extends FormRequest
 //        }
     }
 
-    public function messages()
-    {
-        return [
-            'date.required' => 'A date is required',
-            'date.date_format' => 'A date must be in format: Y-m-d',
-            'date.unique' => 'This date is already taken',
-            'date.after_or_equal' => 'A date must be after or equal today',
-            'date.exists' => 'This date doesn\'t exists',
-        ];
-    }
+//    public function messages()
+//    {
+//        return [
+//            'name.required' => 'A date is required',
+//            'name.unique' => 'A date must be in format: Y-m-d',
+//            'date.unique' => 'This date is already taken',
+//            'date.after_or_equal' => 'A date must be after or equal today',
+//            'date.exists' => 'This date doesn\'t exists',
+//        ];
+//    }
 
     public function all($keys = null)
     {
