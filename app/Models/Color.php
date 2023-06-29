@@ -9,6 +9,11 @@ class Color extends Model
 {
     use HasFactory;
 
+//    public static $rules = [
+//        'name' => 'required|string|max:100|unique:colors,name',
+//        'alias' => 'required|string|max:20|unique:colors,alias',
+//    ];
+
     protected $fillable = ['name', 'alias'];
 
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];

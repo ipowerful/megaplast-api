@@ -2,11 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use App\Http\Requests\ColorRequest;
 use App\Models\Color;
 
 class ColorController extends Controller
 {
+    public function all($keys = null)
+    {
+        // return $this->all();
+        $data = parent::all($keys);
+//        switch ($this->getMethod()) {
+//            // case 'PUT':
+//            // case 'PATCH':
+//            case 'DELETE':
+//                $data[ 'date' ] = $this->route('day');
+//        }
+        return $data;
+    }
+
     public function index()
     {
         return Color::all();
@@ -17,31 +31,28 @@ class ColorController extends Controller
         return $color;
     }
 
-    public function store(Request $request)
+    public function store(Color $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:100|unique:colors,name',
-            'alias' => 'required|string|max:20|unique:colors,alias',
-        ]);
+//        $request->validate(Color::$rules);
+//        return Color::create($request->all());
+        return Color::create($request->validated());
 
-        return Color::create($request->all());
+//        $color = Color::create($request->all());
+
+//        return response()->json($color, 201);
     }
 
-    public function update(Request $request, Color $color)
+    public function update(Color $request, Color $color)
     {
-        $color->update($request->all());
+//        $request->validate(Color::$rules);
 
-        return response()->json($color, 200);
+        $color->update($request->all());
+        return response()->json(['data' => $color], 202);
     }
 
     public function destroy(Color $color)
     {
-        $request->validate([
-            'color' => 'required|integer|unique:colors,id',
-        ]);
-
         $color->delete();
-
         return response()->json(null, 204);
     }
 }
