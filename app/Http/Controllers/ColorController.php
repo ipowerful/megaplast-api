@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\ColorRequest;
 use App\Models\Color;
 
-class ColorController extends Controller
+
+class ColorController extends BaseController
 {
     public function all($keys = null)
     {
@@ -23,15 +24,19 @@ class ColorController extends Controller
 
     public function index()
     {
-        return Color::all();
+        $colors = Color::all();
+        return $this->sendResponse($colors, 'Colors retrieved successfully.');
     }
 
     public function show(Color $color)
     {
-        return $color;
+        /*if (is_null($color)) {
+            return $this->sendError('Color not found');
+        };*/
+        return $this->sendResponse($color, 'Color retrieved successfully.');
     }
 
-    public function store(Color $request)
+    public function store(ColorRequest $request)
     {
 //        $request->validate(Color::$rules);
 //        return Color::create($request->all());
@@ -42,17 +47,19 @@ class ColorController extends Controller
 //        return response()->json($color, 201);
     }
 
-    public function update(Color $request, Color $color)
+    public function update(ColorRequest $request, Color $color)
     {
 //        $request->validate(Color::$rules);
 
         $color->update($request->all());
-        return response()->json(['data' => $color], 202);
+//        return response()->json(['data' => $color], 202);
+        return $this->sendResponse($color, 'Color updated successfully.', 202);
     }
 
     public function destroy(Color $color)
     {
         $color->delete();
-        return response()->json(null, 204);
+        return $this->sendResponse([], 'Color deleted successfully.', 204);
+//        return response()->json(null, 204);
     }
 }

@@ -19,30 +19,32 @@ class ColorRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
-    public function rules(Request $request)
+    public function rules()
     {
         $rules = [
             'name' => 'required|string|max:100|unique:colors,name',
             'alias' => 'required|string|max:20|unique:colors,alias',
         ];
 
-        switch ($this->getMethod()) {
-            case 'POST':
-            case 'PUT':
-                return $rules;
-//                return [
-//                        'game_id' => 'required|integer|exists:games,id', //должен существовать. Можно вот так: unique:games,id,' . $this->route('game'),
-//                        'title' => [
-//                            'required',
-//                            Rule::unique('games')->ignore($this->title, 'title') //должен быть уникальным, за исключением себя же
-//                        ]
-//                    ] + $rules; // и берем все остальные правила
-            // case 'PATCH':
-//            case 'DELETE':
-//                return [
-//                    'game_id' => 'required|integer|exists:games,id'
-//                ];
-        }
+        return $rules;
+
+//        switch ($this->getMethod()) {
+//            case 'POST':
+//            case 'PUT':
+//                return $rules;
+////                return [
+////                        'game_id' => 'required|integer|exists:games,id', //должен существовать. Можно вот так: unique:games,id,' . $this->route('game'),
+////                        'title' => [
+////                            'required',
+////                            Rule::unique('games')->ignore($this->title, 'title') //должен быть уникальным, за исключением себя же
+////                        ]
+////                    ] + $rules; // и берем все остальные правила
+//            // case 'PATCH':
+////            case 'DELETE':
+////                return [
+////                    'game_id' => 'required|integer|exists:games,id'
+////                ];
+//        }
     }
 
     public function messages()
@@ -58,7 +60,6 @@ class ColorRequest extends FormRequest
 
     public function all($keys = null)
     {
-        // return $this->all();
         $data = parent::all($keys);
 //        switch ($this->getMethod())
 //        {
