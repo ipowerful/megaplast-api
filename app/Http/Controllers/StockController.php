@@ -24,7 +24,7 @@ class StockController extends BaseController
     public function store(StockRequest $request)
     {
         $stock = Stock::create($request->validated());
-        return $this->sendResponse($stock, 'Наличие успешно создано', 201);
+        return $this->sendResponse($stock, 'Наличие успешно добавлено', 201);
     }
 
     /**
