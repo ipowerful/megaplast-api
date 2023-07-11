@@ -48,9 +48,4 @@ class StockRequest extends FormRequest
         $data = parent::all($keys);
         return $data;
     }
-//
-//    public function failedValidation(Validator $validator)
-//    {
-//        return response()->json($validator->errors());
-//    }
 }
