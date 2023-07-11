@@ -41,7 +41,7 @@ class ColorController extends BaseController
 //        $request->validate(Color::$rules);
 //        return Color::create($request->all());
         $color = Color::create($request->validated());
-        return $this->sendResponse($color, 'Color created successfully.', 201);
+        return $this->sendResponse($color, 'Color created successfully.');
 //        $color = Color::create($request->all());
 
 //        return response()->json($color, 201);
