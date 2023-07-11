@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 //use Illuminate\Contracts\Validation\Validator;
 
-class StockRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class StockRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'name' => 'required|string|max:50|unique:stocks,name,' . $this->id,
-            'alias' => 'required|string|max:50|unique:stocks,alias,' . $this->id,
-            'color' => 'required|string|max:50',
+            'name' => 'required|string|max:50|unique:products,name,' . $this->id,
+            'alias' => 'required|string|max:50|unique:products,alias,' . $this->id,
         ];
 
         return $rules;
@@ -39,7 +38,6 @@ class StockRequest extends FormRequest
             'name.unique' => 'Укажите другое наименование. Введенное значние уже существует.',
             'alias.required' => 'Заполните алиас',
             'alias.unique' => 'Укажите другой алиас. Введенное значние уже существует.',
-            'color.required' => 'Заполните цвет',
         ];
     }
 
