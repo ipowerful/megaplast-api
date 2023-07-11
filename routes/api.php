@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\ProductController;
 
 
 /*
@@ -24,6 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('colors', ColorController::class);
 Route::apiResource('stocks', StockController::class);
+Route::apiResource('products', ProductController::class);
 
 //Route::apiResource('colors', 'App\Http\Controllers\ColorController');
 //Route::resource('colors', 'App\Http\Controllers\ColorController');
