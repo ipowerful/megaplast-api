@@ -27,6 +27,7 @@ class StockRequest extends FormRequest
             'name' => 'required|string|max:50|unique:stocks,name,' . $this->id,
             'alias' => 'required|string|max:50|unique:stocks,alias,' . $this->id,
             'color' => 'required|string|max:50',
+            'stock_id' => 'integer',
         ];
 
         return $rules;
@@ -40,6 +41,7 @@ class StockRequest extends FormRequest
             'alias.required' => 'Заполните алиас',
             'alias.unique' => 'Укажите другой алиас. Введенное значние уже существует.',
             'color.required' => 'Заполните цвет',
+            'stock_id.integer' => 'Выберите наличие',
         ];
     }
 
