@@ -11,4 +11,9 @@ class Stock extends Model
 
     protected $fillable = ['name', 'alias', 'color'];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

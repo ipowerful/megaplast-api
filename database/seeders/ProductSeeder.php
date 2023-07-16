@@ -20,6 +20,7 @@ class ProductSeeder extends Seeder
             'id' => 1,
             'name' => 'Ящик',
             'alias' => 'box',
+            'stock_id' => 1,
         ]);
     }
 }
