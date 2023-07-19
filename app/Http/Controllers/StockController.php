@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\BaseController as BaseController;
-use App\Http\Requests\StockRequest;
 use App\Models\Stock;
+use App\Http\Requests\StockRequest;
+use App\Http\Controllers\BaseController as BaseController;
 
 class StockController extends BaseController
 {

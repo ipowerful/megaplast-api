@@ -2,11 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Color;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Stock;
-
 
 class StockSeeder extends Seeder
 {
