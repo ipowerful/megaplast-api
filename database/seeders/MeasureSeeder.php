@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Unit;
+use App\Models\Measure;
 
-class UnitSeeder extends Seeder
+class MeasureSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,14 +14,14 @@ class UnitSeeder extends Seeder
     public function run(): void
     {
         // Let's truncate our existing records to start from scratch.
-        Unit::truncate();
+        Measure::truncate();
 
-        Unit::create([
+        Measure::create([
             'id' => 1,
             'name' => 'шт.',
         ]);
 
-        Unit::create([
+        Measure::create([
             'id' => 2,
             'name' => 'пара',
         ]);

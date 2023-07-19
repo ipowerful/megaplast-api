@@ -4,9 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-//use Illuminate\Contracts\Validation\Validator;
-
-class UnitRequest extends FormRequest
+class MeasureRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +22,7 @@ class UnitRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'name' => 'required|string|max:50|unique:units,name,' . $this->id,
+            'name' => 'required|string|max:50|unique:measures,name,' . $this->id,
         ];
 
         return $rules;

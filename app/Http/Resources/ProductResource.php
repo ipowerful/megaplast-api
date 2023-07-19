@@ -20,7 +20,7 @@ class ProductResource extends JsonResource
             'name' => $this->name,
             'alias' => $this->alias,
             'stock' => new StockResource($this->stock),
-            'unit' => new UnitResource($this->unit),
+            'measure' => new MeasureResource($this->measure),
         ];
     }
 }
