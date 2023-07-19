@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Stock;
+use App\Models\Unit;
 
 return new class extends Migration {
     /**
@@ -15,7 +16,8 @@ return new class extends Migration {
             $table->id();
             $table->string('name', 100)->unique();
             $table->string('alias', 100)->unique();
-            $table->foreignIdFor(Stock::class)->nullable()->unsigned();
+            $table->foreignIdFor(Stock::class)->unsigned();
+            $table->foreignIdFor(Unit::class)->unsigned();
             $table->timestamps();
         });
     }

@@ -4,8 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-//use Illuminate\Contracts\Validation\Validator;
-
 class ProductRequest extends FormRequest
 {
     /**
@@ -26,6 +24,8 @@ class ProductRequest extends FormRequest
         $rules = [
             'name' => 'required|string|max:50|unique:products,name,' . $this->id,
             'alias' => 'required|string|max:50|unique:products,alias,' . $this->id,
+            'stock_id' => 'required|integer',
+            'unit_id' => 'required|integer',
         ];
 
         return $rules;
@@ -39,11 +39,5 @@ class ProductRequest extends FormRequest
             'alias.required' => 'Заполните алиас',
             'alias.unique' => 'Укажите другой алиас. Введенное значние уже существует.',
         ];
-    }
-
-    public function all($keys = null)
-    {
-        $data = parent::all($keys);
-        return $data;
     }
 }
