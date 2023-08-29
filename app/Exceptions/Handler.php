@@ -33,10 +33,10 @@ class Handler extends ExceptionHandler
         $this->renderable(function (NotFoundHttpException $e, $request) {
             if ($request->is('api/*')) {
                 return response()->json([
-                    'success' => 'false',
+                    'success' => false,
                     'status' => 'error',
                     'error' => NotFoundHttpException::class,
-                    'message' => 'Entity not found',
+                    'message' => 'Запись не найдена',
                     'request' => request()?->all(),
                 ], 404);
             }
@@ -45,7 +45,7 @@ class Handler extends ExceptionHandler
         $this->renderable(function (ValidationException $e, $request) {
             if ($request->is('api/*')) {
                 return response()->json([
-                    'success' => 'false',
+                    'success' => false,
                     'status' => 'error',
                     'message' => $e->getMessage(),
                     'errors' => $e->errors(),
