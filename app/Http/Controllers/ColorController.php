@@ -59,7 +59,6 @@ class ColorController extends BaseController
     public function destroy(Color $color)
     {
         $color->delete();
-        return $this->sendResponse([], 'Color deleted successfully.', 204);
-//        return response()->json(null, 204);
+        return $this->sendResponse([], 'Цвет измерения успешно удален');
     }
 }

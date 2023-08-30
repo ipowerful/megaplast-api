@@ -23,7 +23,7 @@ class ColorRequest extends FormRequest
     {
         $rules = [
             'name' => 'required|string|max:100|unique:colors,name',
-            'alias' => 'required|string|max:20|unique:colors,alias',
+            'slug' => 'required|string|max:20|unique:colors,slug',
         ];
 
         return $rules;

@@ -24,8 +24,8 @@ class ProductRequest extends FormRequest
         $rules = [
             'name' => 'required|string|max:50|unique:products,name,' . $this->id,
             'alias' => 'required|string|max:50|unique:products,alias,' . $this->id,
-            'stock_id' => 'required|integer',
-            'unit_id' => 'required|integer',
+            'stock_id' => 'required|exists:stocks,id',
+            'measure_id' => 'required|exists:measures,id',
         ];
 
         return $rules;

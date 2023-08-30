@@ -19,43 +19,43 @@ class ColorsTableSeeder extends Seeder
         Color::create([
             'id' => 1,
             'name' => 'Желтый',
-            'alias' => 'yellow',
+            'slug' => 'yellow',
         ]);
 
         Color::create([
             'id' => 2,
             'name' => 'Красный',
-            'alias' => 'red',
+            'slug' => 'red',
         ]);
 
         Color::create([
             'id' => 3,
             'name' => 'Серый',
-            'alias' => 'grey',
+            'slug' => 'grey',
         ]);
 
         Color::create([
             'id' => 4,
             'name' => 'Черный',
-            'alias' => 'black',
+            'slug' => 'black',
         ]);
 
         Color::create([
             'id' => 5,
             'name' => 'Зеленый',
-            'alias' => 'green',
+            'slug' => 'green',
         ]);
 
         Color::create([
             'id' => 6,
             'name' => 'Синий',
-            'alias' => 'blue',
+            'slug' => 'blue',
         ]);
 
         Color::create([
             'id' => 7,
             'name' => 'Белый',
-            'alias' => 'white',
+            'slug' => 'white',
         ]);
 
     }
