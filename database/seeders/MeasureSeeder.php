@@ -25,10 +25,5 @@ class MeasureSeeder extends Seeder
             'id' => 2,
             'name' => 'пара',
         ]);
-        
-        Measure::create([
-            'id' => 3,
-            'name' => 'парапара',
-        ]);
     }
 }
