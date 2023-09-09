@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('alias')->unique();
+            $table->string('slug')->unique();
             $table->string('color');
             $table->timestamps();
         });
