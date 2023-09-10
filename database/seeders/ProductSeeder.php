@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
         Product::create([
             'id' => 1,
             'name' => 'Ящик',
-            'alias' => 'box',
+            'slug' => 'box',
             'stock_id' => 1,
             'measure_id' => 1,
         ]);

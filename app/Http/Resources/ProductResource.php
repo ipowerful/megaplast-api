@@ -14,11 +14,10 @@ class ProductResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-//        $stock = StockResource::make($this->stock);
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'alias' => $this->alias,
+            'slug' => $this->slug,
             'stock' => new StockResource($this->stock),
             'measure' => new MeasureResource($this->measure),
         ];
