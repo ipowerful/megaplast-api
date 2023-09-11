@@ -24,7 +24,7 @@ class ProductController extends BaseController
     public function store(ProductRequest $request)
     {
         $product = Product::create($request->validated());
-        return $this->sendResponse($product, 'Товар успешно добавлено', 201);
+        return $this->sendResponse($product, 'Товар успешно добавлен', 201);
     }
 
     /**
