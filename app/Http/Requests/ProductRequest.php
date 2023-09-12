@@ -23,7 +23,11 @@ class ProductRequest extends FormRequest
     {
         $rules = [
             'name' => 'required|string|max:50|unique:products,name,' . $this->id,
-            'slug' => 'required|string|max:50|unique:products,slug,' . $this->id,
+            'name_full' => 'required|string|max:100|unique:products,name_full,' . $this->id,
+            'slug' => 'required|string|max:100|unique:products,slug,' . $this->id,
+            'article' => 'required|max:20|unique:products,article,' . $this->id,
+            'price' => 'required|decimal:0,2',
+            'price_old' => 'required|decimal:0,2',
             'stock_id' => 'required|exists:stocks,id',
             'measure_id' => 'required|exists:measures,id',
         ];
@@ -35,11 +39,17 @@ class ProductRequest extends FormRequest
     {
         return [
             'name.required' => 'Заполните Наименование',
-            'name.unique' => 'Укажите другое Наименование. Введенное значние уже существует.',
+            'name.unique' => 'Укажите другое Наименование. Введенное значение уже существует.',
+            'name_full.required' => 'Заполните Полное наименование',
+            'name_full.unique' => 'Укажите другое Полное наименование. Введенное значение уже существует.',
             'slug.required' => 'Заполните Идентификатор',
-            'slug.unique' => 'Укажите другой Идентификатор. Введенное значние уже существует.',
-            'stock_id.required' => 'Выберите Наличие.',
-            'measure_id.required' => 'Выберите Единицу измерения.',
+            'slug.unique' => 'Укажите другой Идентификатор. Введенное значение уже существует.',
+            'article.required' => 'Заполните Артикул',
+            'article.unique' => 'Укажите другой Артикул. Введенное значение уже существует.',
+            'stock_id.required' => 'Выберите Наличие',
+            'price.required' => 'Заполните Цену',
+            'price.decimal' => 'Цена должна быть числом',
+            'price_old.decimal' => 'Старая цена должна быть числом',
         ];
     }
 }
