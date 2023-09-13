@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Stock;
 use App\Models\Measure;
+use App\Models\Category;
 
 return new class extends Migration {
     /**
@@ -22,6 +23,7 @@ return new class extends Migration {
             $table->decimal('price_old', 9, 0);
             $table->foreignIdFor(Stock::class)->unsigned();
             $table->foreignIdFor(Measure::class)->unsigned();
+            $table->foreignIdFor(Category::class)->unsigned();
             $table->timestamps();
         });
     }

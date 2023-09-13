@@ -24,6 +24,7 @@ class ProductResource extends JsonResource
             'price_old' => $this->price_old,
             'stock' => new StockResource($this->stock),
             'measure' => new MeasureResource($this->measure),
+            'category' => new CategoryResource($this->category),
         ];
     }
 }
