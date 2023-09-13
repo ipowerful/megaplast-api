@@ -18,13 +18,10 @@ class ProductController extends BaseController
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(ProductRequest $request)
+    public function userIndex()
     {
-        $product = Product::create($request->validated());
-        return $this->sendResponse($product, 'Товар успешно добавлен', 201);
+        $products = ProductResource::collection(Product::with('measure')->get());
+        return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
     /**
@@ -33,6 +30,21 @@ class ProductController extends BaseController
     public function show(Product $product)
     {
         return $this->sendResponse($product, 'Product retrieved successfully.');
+    }
+
+    public function userShow(Product $product)
+    {
+        return $this->sendResponse($product, 'Product retrieved successfully.');
+    }
+
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(ProductRequest $request)
+    {
+        $product = Product::create($request->validated());
+        return $this->sendResponse($product, 'Товар успешно добавлен', 201);
     }
 
 

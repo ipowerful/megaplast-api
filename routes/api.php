@@ -25,12 +25,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResource('colors', ColorController::class);
-Route::apiResource('stocks', StockController::class);
-Route::apiResource('products', ProductController::class);
-Route::apiResource('measures', MeasureController::class);
-Route::apiResource('categories', CategoryController::class);
+// ------- ADMIN Routes------------
+Route::apiResource('admin/colors', ColorController::class);
+Route::apiResource('admin/stocks', StockController::class);
+Route::apiResource('admin/products', ProductController::class);
+Route::apiResource('admin/measures', MeasureController::class);
+Route::apiResource('admin/categories', CategoryController::class);
 
-//Route::apiResource('colors', 'App\Http\Controllers\ColorController');
-//Route::resource('colors', 'App\Http\Controllers\ColorController');
-//Route::get('colors', 'ColorController@index');
+
+// ------- USER Routes------------
+Route::get('user/products', [ProductController::class, 'userIndex']);
+Route::get('user/products/{product}', [ProductController::class, 'userShow']);
