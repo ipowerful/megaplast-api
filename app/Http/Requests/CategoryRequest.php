@@ -26,6 +26,7 @@ class CategoryRequest extends FormRequest
         $rules = [
             'name' => 'required|string|max:50|unique:categories,name,' . $this->id,
             'slug' => 'required|string|max:50|unique:categories,slug,' . $this->id,
+            'image' => 'required|string|unique:categories,image,' . $this->id,
         ];
 
         return $rules;
@@ -35,9 +36,11 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name.required' => 'Заполните наименование',
-            'name.unique' => 'Укажите другое наименование. Введенное значние уже существует.',
+            'name.unique' => 'Укажите другое наименование. Введенное значение уже существует.',
             'slug.required' => 'Заполните алиас',
-            'slug.unique' => 'Укажите другой алиас. Введенное значние уже существует.',
+            'slug.unique' => 'Укажите другой алиас. Введенное значение уже существует.',
+            'image.required' => 'Заполните Изображение',
+            'image.unique' => 'Укажите другое Изображение. Введенное значение уже существует.',
         ];
     }
 
