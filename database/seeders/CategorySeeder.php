@@ -20,24 +20,28 @@ class CategorySeeder extends Seeder
             'id' => 1,
             'name' => 'Пластиковые ящики',
             'slug' => 'plastikovye-jashhiki',
+            'image' => 'purpose1',
         ]);
 
         Category::create([
             'id' => 2,
             'name' => 'Паллеты, поддоны',
             'slug' => 'pallety-poddony',
+            'image' => 'purpose2',
         ]);
 
         Category::create([
             'id' => 3,
             'name' => 'Решетки, ячейки',
             'slug' => 'reshetki-yachejki',
+            'image' => 'purpose3',
         ]);
 
         Category::create([
             'id' => 4,
             'name' => 'Одноразовая спецодежда',
             'slug' => 'odnorazovaya-specodezhda',
+            'image' => 'purpose4',
         ]);
     }
 }
