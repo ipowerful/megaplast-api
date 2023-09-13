@@ -26,6 +26,7 @@ class ProductSeeder extends Seeder
             'price_old' => 0,
             'stock_id' => 1,
             'measure_id' => 1,
+            'category_id' => 1,
         ]);
 
         Product::create([
@@ -38,6 +39,7 @@ class ProductSeeder extends Seeder
             'price_old' => 0,
             'stock_id' => 1,
             'measure_id' => 1,
+            'category_id' => 1,
         ]);
     }
 }

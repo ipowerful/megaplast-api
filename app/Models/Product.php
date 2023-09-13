@@ -17,7 +17,8 @@ class Product extends Model
         'price',
         'price_old',
         'stock_id',
-        'measure_id'
+        'measure_id',
+        'category_id',
     ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
@@ -29,5 +30,10 @@ class Product extends Model
     public function measure(): belongsTo
     {
         return $this->belongsTo(Measure::class);
+    }
+
+    public function category(): belongsTo
+    {
+        return $this->belongsTo(Category::class);
     }
 }

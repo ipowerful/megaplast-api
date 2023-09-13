@@ -30,6 +30,7 @@ class ProductRequest extends FormRequest
             'price_old' => 'required|decimal:0,2',
             'stock_id' => 'required|exists:stocks,id',
             'measure_id' => 'required|exists:measures,id',
+            'category_id' => 'required|integer',
         ];
 
         return $rules;
@@ -50,6 +51,7 @@ class ProductRequest extends FormRequest
             'price.required' => 'Заполните Цену',
             'price.decimal' => 'Цена должна быть числом',
             'price_old.decimal' => 'Старая цена должна быть числом',
+            'category_id.required' => 'Выберите Категорию',
         ];
     }
 }
