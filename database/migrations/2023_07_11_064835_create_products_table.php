@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->string('article', 20)->unique();
             $table->decimal('price', 9, 0);
             $table->decimal('price_old', 9, 0);
+            $table->boolean('is_popular')->default(false);
             $table->foreignIdFor(Stock::class)->unsigned();
             $table->foreignIdFor(Measure::class)->unsigned();
             $table->foreignIdFor(Category::class)->unsigned();

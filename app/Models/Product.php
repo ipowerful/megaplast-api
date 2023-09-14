@@ -16,6 +16,7 @@ class Product extends Model
         'slug',
         'price',
         'price_old',
+        'is_popular',
         'stock_id',
         'measure_id',
         'category_id',
