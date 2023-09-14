@@ -22,6 +22,7 @@ class ProductResource extends JsonResource
             'article' => $this->article,
             'price' => $this->price,
             'price_old' => $this->price_old,
+            'is_popular' => $this->is_popular,
             'stock' => new StockResource($this->stock),
             'measure' => new MeasureResource($this->measure),
             'category' => new CategoryResource($this->category),
