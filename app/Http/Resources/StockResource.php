@@ -17,6 +17,9 @@ class StockResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'slug' => $this->slug,
+            'color_id' => $this->color->id,
+            'color_name' => $this->color->name,
         ];
     }
 }

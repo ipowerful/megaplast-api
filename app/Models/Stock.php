@@ -2,18 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\belongsTo;
 
 class Stock extends Model
 {
-    use HasFactory;
-
-    protected $fillable = ['name', 'slug', 'color'];
+    protected $fillable = [
+        'name',
+        'slug',
+        'color_id',
+    ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
-    public function product()
+    public function color(): belongsTo
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Color::class);
     }
 }

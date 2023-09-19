@@ -20,14 +20,14 @@ class StockSeeder extends Seeder
             'id' => 1,
             'name' => 'В наличии',
             'slug' => 'in',
-            'color' => 'green',
+            'color_id' => 5,
         ]);
 
         Stock::create([
             'id' => 2,
             'slug' => 'out',
             'name' => 'Под заказ',
-            'color' => 'red',
+            'color_id' => 2,
         ]);
     }
 }
