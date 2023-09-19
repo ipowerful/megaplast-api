@@ -23,9 +23,12 @@ class ProductResource extends JsonResource
             'price' => $this->price,
             'price_old' => $this->price_old,
             'is_popular' => $this->is_popular,
-            'stock' => new StockResource($this->stock),
-            'measure' => new MeasureResource($this->measure),
-            'category' => new CategoryResource($this->category),
+            'stock_id' => $this->stock->id,
+            'stock_name' => $this->stock->name,
+            'measure_id' => $this->measure->id,
+            'measure_name' => $this->measure->name,
+            'category_id' => $this->category->id,
+            'category_name' => $this->category->name,
         ];
     }
 }
