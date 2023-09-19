@@ -7,6 +7,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MeasureController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BadgeController;
 
 
 /*
@@ -31,6 +32,7 @@ Route::apiResource('admin/stocks', StockController::class);
 Route::apiResource('admin/products', ProductController::class);
 Route::apiResource('admin/measures', MeasureController::class);
 Route::apiResource('admin/categories', CategoryController::class);
+Route::apiResource('admin/badges', BadgeController::class);
 
 
 // ------- USER Routes------------
