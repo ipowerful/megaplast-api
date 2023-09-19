@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Stock;
 use App\Http\Requests\StockRequest;
+use App\Http\Resources\StockResource;
 use App\Http\Controllers\BaseController as BaseController;
 
 class StockController extends BaseController
@@ -13,7 +14,7 @@ class StockController extends BaseController
      */
     public function index()
     {
-        $stocks = Stock::all();
+        $stocks = StockResource::collection(Stock::all());
         return $this->sendResponse($stocks, 'Stocks retrieved successfully.');
     }
 
