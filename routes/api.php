@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MeasureController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BadgeController;
+use App\Http\Controllers\IndustryController;
 
 
 /*
@@ -33,6 +34,7 @@ Route::apiResource('admin/products', ProductController::class);
 Route::apiResource('admin/measures', MeasureController::class);
 Route::apiResource('admin/categories', CategoryController::class);
 Route::apiResource('admin/badges', BadgeController::class);
+Route::apiResource('admin/industries', IndustryController::class);
 
 
 // ------- USER Routes------------
@@ -40,3 +42,4 @@ Route::get('user/products', [ProductController::class, 'userIndex']);
 Route::get('user/products/{product}', [ProductController::class, 'userShow']);
 
 Route::get('user/categories', [CategoryController::class, 'index']);
+Route::get('user/industries', [CategoryController::class, 'index']);
