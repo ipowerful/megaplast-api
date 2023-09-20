@@ -25,6 +25,10 @@ class Product extends Model
     ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
+    protected $casts = [
+        'is_popular' => 'boolean',
+    ];
+
     public function stock(): belongsTo
     {
         return $this->belongsTo(Stock::class);

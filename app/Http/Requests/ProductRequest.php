@@ -21,7 +21,7 @@ class ProductRequest extends FormRequest
      */
     public function rules(): array
     {
-        $rules = [
+        return [
             'name' => 'required|string|max:50|unique:products,name,' . $this->id,
             'name_full' => 'required|string|max:100|unique:products,name_full,' . $this->id,
             'slug' => 'required|string|max:100|unique:products,slug,' . $this->id,
@@ -31,9 +31,8 @@ class ProductRequest extends FormRequest
             'stock_id' => 'required|exists:stocks,id',
             'measure_id' => 'required|exists:measures,id',
             'category_id' => 'required|integer',
+            'is_popular' => 'required|boolean',
         ];
-
-        return $rules;
     }
 
     public function messages()
