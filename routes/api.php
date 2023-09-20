@@ -42,4 +42,4 @@ Route::get('user/products', [ProductController::class, 'userIndex']);
 Route::get('user/products/{product}', [ProductController::class, 'userShow']);
 
 Route::get('user/categories', [CategoryController::class, 'index']);
-Route::get('user/industries', [CategoryController::class, 'index']);
+Route::get('user/industries', [IndustryController::class, 'index']);
