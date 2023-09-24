@@ -9,6 +9,7 @@ use App\Http\Controllers\MeasureController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BadgeController;
 use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\ParameterController;
 
 
 /*
@@ -35,6 +36,7 @@ Route::apiResource('admin/measures', MeasureController::class);
 Route::apiResource('admin/categories', CategoryController::class);
 Route::apiResource('admin/badges', BadgeController::class);
 Route::apiResource('admin/industries', IndustryController::class);
+Route::apiResource('admin/parameters', ParameterController::class);
 
 
 // ------- USER Routes------------
