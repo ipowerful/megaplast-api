@@ -12,9 +12,6 @@ class ParameterSeeder extends Seeder
      */
     public function run(): void
     {
-        // Let's truncate our existing records to start from scratch.
-        Parameter::truncate();
-
         Parameter::create([
             'id' => 1,
             'name' => 'Вес',
