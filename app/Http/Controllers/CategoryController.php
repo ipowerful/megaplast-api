@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Http\Requests\CategoryRequest;
+use App\Http\Resources\CategoryResource;
 use App\Http\Controllers\BaseController as BaseController;
 
 class CategoryController extends BaseController
@@ -13,7 +14,7 @@ class CategoryController extends BaseController
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = CategoryResource::collection(Category::all());
         return $this->sendResponse($categories, 'Categories retrieved successfully.');
     }
 
