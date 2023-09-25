@@ -14,9 +14,6 @@ class BadgeSeeder extends Seeder
      */
     public function run(): void
     {
-        // Let's truncate our existing records to start from scratch.
-        Badge::truncate();
-
         Badge::create([
             'id' => 1,
             'name' => 'Новинка',
