@@ -14,7 +14,7 @@ class ProductController extends BaseController
      */
     public function index()
     {
-        $products = ProductResource::collection(Product::with('measure')->get());
+        $products = ProductResource::collection(Product::all());
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
