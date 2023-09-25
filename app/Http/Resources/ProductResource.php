@@ -25,11 +25,12 @@ class ProductResource extends JsonResource
             'is_popular' => $this->is_popular,
             'stock_id' => $this->stock->id,
             'stock_name' => $this->stock->name,
+            'stock_color' => $this->stock->color->slug,
             'measure_id' => $this->measure->id,
             'measure_name' => $this->measure->name,
             'category_id' => $this->category->id,
             'category_name' => $this->category->name,
-            'industries' => $this->industries()->select('name')->get(),
+            'industries' => $this->industries()->select('id', 'name')->get(),
         ];
     }
 }
