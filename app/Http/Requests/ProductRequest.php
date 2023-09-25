@@ -22,16 +22,16 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:50|unique:products,name,' . $this->id,
-            'name_full' => 'required|string|max:100|unique:products,name_full,' . $this->id,
-            'slug' => 'required|string|max:100|unique:products,slug,' . $this->id,
-            'article' => 'required|max:20|unique:products,article,' . $this->id,
-            'price' => 'required|decimal:0,2',
-            'price_old' => 'required|decimal:0,2',
-            'stock_id' => 'required|exists:stocks,id',
-            'measure_id' => 'required|exists:measures,id',
-            'category_id' => 'required|integer',
-            'is_popular' => 'required|boolean',
+            'name' => 'sometimes|required|string|max:50|unique:products,name,' . $this->id,
+            'name_full' => 'sometimes|required|string|max:100|unique:products,name_full,' . $this->id,
+            'slug' => 'sometimes|required|string|max:100|unique:products,slug,' . $this->id,
+            'article' => 'sometimes|required|max:20|unique:products,article,' . $this->id,
+            'price' => 'sometimes|required|decimal:0,2',
+            'price_old' => 'sometimes|required|decimal:0,2',
+            'stock_id' => 'sometimes|required|exists:stocks,id',
+            'measure_id' => 'sometimes|required|exists:measures,id',
+            'category_id' => 'sometimes|required|integer',
+            'is_popular' => 'sometimes|required|boolean',
         ];
     }
 
