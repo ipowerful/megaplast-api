@@ -30,7 +30,7 @@ class ProductResource extends JsonResource
             'category_id' => $this->category->id,
             'category_name' => $this->category->name,
             'industries' => $this->industries()->select('id', 'name')->get(),
-            'badges' => $this->badges()->select('id', 'name')->get(),
+            'badges' => BadgeResource::collection($this->badges),
         ];
     }
 }

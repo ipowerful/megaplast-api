@@ -58,5 +58,10 @@ class ColorsTableSeeder extends Seeder
             'slug' => 'white',
         ]);
 
+        Color::create([
+            'id' => 8,
+            'name' => 'Оранжевый',
+            'slug' => 'orange',
+        ]);
     }
 }
