@@ -9,7 +9,7 @@ class Badge extends Model
 {
 
     protected $fillable = ['name', 'color_id'];
-    protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = ['created_at', 'updated_at', 'deleted_at', 'pivot'];
 
 
     public function color(): belongsTo

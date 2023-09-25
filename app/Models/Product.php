@@ -49,4 +49,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Industry::class);
     }
+
+    public function badges(): BelongsToMany
+    {
+        return $this->belongsToMany(Badge::class);
+    }
 }

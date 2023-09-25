@@ -13,9 +13,6 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        // Let's truncate our existing records to start from scratch.
-//        Product::truncate();
-
         $product = Product::create([
             'id' => 108,
             'name' => 'Комбайн для сбора ягод 240*220*200 мм',
@@ -30,6 +27,7 @@ class ProductSeeder extends Seeder
             'category_id' => 1,
         ]);
         $product->industries()->attach([3, 4]);
+        $product->badges()->attach([1, 2]);
 
         $product = Product::create([
             'id' => 107,
@@ -45,5 +43,6 @@ class ProductSeeder extends Seeder
             'category_id' => 1,
         ]);
         $product->industries()->attach(1);
+        $product->badges()->attach(3);
     }
 }
