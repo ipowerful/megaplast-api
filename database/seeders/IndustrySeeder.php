@@ -13,7 +13,7 @@ class IndustrySeeder extends Seeder
     public function run(): void
     {
         // Let's truncate our existing records to start from scratch.
-        Industry::truncate();
+//        Industry::truncate();
 
         Industry::create([
             'id' => 1,

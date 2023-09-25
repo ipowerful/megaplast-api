@@ -29,6 +29,7 @@ class ProductResource extends JsonResource
             'measure_name' => $this->measure->name,
             'category_id' => $this->category->id,
             'category_name' => $this->category->name,
+            'industries' => $this->industries()->select('name')->get(),
         ];
     }
 }
