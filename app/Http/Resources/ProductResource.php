@@ -14,6 +14,14 @@ class ProductResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+
+        $industries = $this->industries()->select('id', 'name')->get();
+        
+        $industry_ids = [];
+        foreach ($industries as $key => $value) {
+            array_push($industry_ids, $value[ 'id' ]);
+        }
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -29,7 +37,8 @@ class ProductResource extends JsonResource
             'measure_name' => $this->measure->name,
             'category_id' => $this->category->id,
             'category_name' => $this->category->name,
-            'industries' => $this->industries()->select('id', 'name')->get(),
+            'industries' => $industries,
+            'industry_ids' => $industry_ids,
             'badges' => BadgeResource::collection($this->badges),
         ];
     }

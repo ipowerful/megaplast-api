@@ -54,6 +54,7 @@ class ProductController extends BaseController
     public function update(ProductRequest $request, Product $product)
     {
         $product->update($request->validated());
+        $product->industries()->sync($request->input('industry_ids', []));
         return $this->sendResponse($product, 'Товар успешно изменен', 202);
     }
 
