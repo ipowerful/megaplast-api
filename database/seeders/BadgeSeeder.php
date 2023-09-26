@@ -23,7 +23,7 @@ class BadgeSeeder extends Seeder
         Badge::create([
             'id' => 2,
             'name' => 'Лучшая цена',
-            'color_id' => 1,
+            'color_id' => 8,
         ]);
 
         Badge::create([
