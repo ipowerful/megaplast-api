@@ -25,9 +25,9 @@ class ProductResource extends JsonResource
 
         $badges = $this->badges()->select('id')->get();
 
-        $badges_ids = [];
+        $badge_ids = [];
         foreach ($badges as $key => $value) {
-            array_push($badges_ids, $value[ 'id' ]);
+            array_push($badge_ids, $value[ 'id' ]);
         }
 
         return [
@@ -48,7 +48,7 @@ class ProductResource extends JsonResource
             'industries' => $industries,
             'industry_ids' => $industry_ids,
             'badges' => BadgeResource::collection($this->badges),
-            'badges_ids' => $badges_ids,
+            'badge_ids' => $badge_ids,
         ];
     }
 }
