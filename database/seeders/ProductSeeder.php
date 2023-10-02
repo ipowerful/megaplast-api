@@ -234,7 +234,7 @@ class ProductSeeder extends Seeder
             'price' => 78,
             'price_old' => 0,
             'is_popular' => false,
-            'stock_id' => 1,
+            'stock_id' => 2,
             'measure_id' => 1,
             'category_id' => 1,
         ]);
@@ -249,7 +249,7 @@ class ProductSeeder extends Seeder
             'price' => 78,
             'price_old' => 0,
             'is_popular' => false,
-            'stock_id' => 1,
+            'stock_id' => 2,
             'measure_id' => 1,
             'category_id' => 1,
         ]);
