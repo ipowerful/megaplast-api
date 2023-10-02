@@ -22,7 +22,7 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'sometimes|required|string|max:50|unique:products,name,' . $this->id,
+            'name' => 'sometimes|required|string|max:50',
             'name_full' => 'sometimes|required|string|max:100|unique:products,name_full,' . $this->id,
             'slug' => 'sometimes|required|string|max:100|unique:products,slug,' . $this->id,
             'article' => 'sometimes|required|max:20|unique:products,article,' . $this->id,
@@ -39,7 +39,6 @@ class ProductRequest extends FormRequest
     {
         return [
             'name.required' => 'Заполните Наименование',
-            'name.unique' => 'Укажите другое Наименование. Введенное значение уже существует.',
             'name_full.required' => 'Заполните Полное наименование',
             'name_full.unique' => 'Укажите другое Полное наименование. Введенное значение уже существует.',
             'slug.required' => 'Заполните Идентификатор',
