@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Badge;
 use App\Http\Requests\BadgeRequest;
 use App\Http\Resources\BadgeResource;
+use App\Http\Resources\BadgeUserResource;
 use App\Http\Controllers\BaseController as BaseController;
 
 class BadgeController extends BaseController
@@ -15,6 +16,12 @@ class BadgeController extends BaseController
     public function index()
     {
         $badges = BadgeResource::collection(Badge::all());
+        return $this->sendResponse($badges, 'Badges retrieved successfully.');
+    }
+
+    public function userIndex()
+    {
+        $badges = BadgeUserResource::collection(Badge::all());
         return $this->sendResponse($badges, 'Badges retrieved successfully.');
     }
 
