@@ -17,17 +17,17 @@ class ProductResource extends JsonResource
 
         $industries = $this->industries()->select('id', 'name')->get();
 
-        $industry_ids = [];
+        $industry_id = [];
         foreach ($industries as $key => $value) {
-            array_push($industry_ids, $value[ 'id' ]);
+            array_push($industry_id, $value[ 'id' ]);
         }
 
 
         $badges = $this->badges()->select('id')->get();
 
-        $badge_ids = [];
+        $badge_id = [];
         foreach ($badges as $key => $value) {
-            array_push($badge_ids, $value[ 'id' ]);
+            array_push($badge_id, $value[ 'id' ]);
         }
 
         return [
@@ -43,12 +43,14 @@ class ProductResource extends JsonResource
             'stock' => $this->stock->slug,
             'measure_id' => $this->measure->id,
             'measure_name' => $this->measure->name,
-            'category_id' => $this->category->id,
             'category_name' => $this->category->name,
             'industries' => $industries,
-            'industry_ids' => $industry_ids,
             'badges' => BadgeResource::collection($this->badges),
-            'badge_ids' => $badge_ids,
+
+
+            'category_id' => $this->category->id,
+            'industry_id' => $industry_id,
+            'badge_id' => $badge_id,
         ];
     }
 }
