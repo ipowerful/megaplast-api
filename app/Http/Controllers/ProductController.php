@@ -44,8 +44,8 @@ class ProductController extends BaseController
     public function store(ProductRequest $request)
     {
         $product = Product::create($request->validated());
-        $product->industries()->sync($request->input('industry_ids', []));
-        $product->badges()->sync($request->input('badge_ids', []));
+        $product->industries()->sync($request->input('industry_id', []));
+        $product->badges()->sync($request->input('badge_id', []));
         return $this->sendResponse($product, 'Товар успешно добавлен', 201);
     }
 
@@ -56,8 +56,8 @@ class ProductController extends BaseController
     public function update(ProductRequest $request, Product $product)
     {
         $product->update($request->validated());
-        $product->industries()->sync($request->input('industry_ids', []));
-        $product->badges()->sync($request->input('badge_ids', []));
+        $product->industries()->sync($request->input('industry_id', []));
+        $product->badges()->sync($request->input('badge_id', []));
         return $this->sendResponse($product, 'Товар успешно изменен', 202);
     }
 
