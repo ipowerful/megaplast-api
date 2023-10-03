@@ -28,10 +28,10 @@ class ProductRequest extends FormRequest
             'article' => 'sometimes|required|max:20|unique:products,article,' . $this->id,
             'price' => 'sometimes|required|decimal:0,2',
             'price_old' => 'sometimes|required|decimal:0,2',
-            'stock_id' => 'sometimes|required|exists:stocks,id',
             'measure_id' => 'sometimes|required|exists:measures,id',
             'category_id' => 'sometimes|required|integer',
             'is_popular' => 'sometimes|required|boolean',
+            'is_in_stock' => 'sometimes|required|boolean',
         ];
     }
 
@@ -45,7 +45,6 @@ class ProductRequest extends FormRequest
             'slug.unique' => 'Укажите другой Идентификатор. Введенное значение уже существует.',
             'article.required' => 'Заполните Артикул',
             'article.unique' => 'Укажите другой Артикул. Введенное значение уже существует.',
-            'stock_id.required' => 'Выберите Наличие',
             'price.required' => 'Заполните Цену',
             'price.decimal' => 'Цена должна быть числом',
             'price_old.decimal' => 'Старая цена должна быть числом',
