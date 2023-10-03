@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ColorController;
-use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MeasureController;
 use App\Http\Controllers\CategoryController;
@@ -30,7 +29,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // ------- ADMIN Routes------------
 Route::apiResource('admin/colors', ColorController::class);
-Route::apiResource('admin/stocks', StockController::class);
 Route::apiResource('admin/products', ProductController::class);
 Route::apiResource('admin/measures', MeasureController::class);
 Route::apiResource('admin/categories', CategoryController::class);

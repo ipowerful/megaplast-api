@@ -20,7 +20,7 @@ class Product extends Model
         'price',
         'price_old',
         'is_popular',
-        'stock_id',
+        'is_in_stock',
         'measure_id',
         'category_id',
     ];
@@ -28,12 +28,8 @@ class Product extends Model
 
     protected $casts = [
         'is_popular' => 'boolean',
+        'is_in_stock' => 'boolean',
     ];
-
-    public function stock(): belongsTo
-    {
-        return $this->belongsTo(Stock::class);
-    }
 
     public function measure(): belongsTo
     {
