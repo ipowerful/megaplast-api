@@ -43,3 +43,4 @@ Route::get('user/products/{product}', [ProductController::class, 'userShow']);
 
 Route::get('user/categories', [CategoryController::class, 'index']);
 Route::get('user/industries', [IndustryController::class, 'index']);
+Route::get('user/badges', [BadgeController::class, 'userIndex']);
