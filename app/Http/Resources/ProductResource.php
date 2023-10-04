@@ -17,9 +17,9 @@ class ProductResource extends JsonResource
 
         $industries = $this->industries()->select('id', 'name')->get();
 
-        $industry_id = [];
+        $industry_ids = [];
         foreach ($industries as $key => $value) {
-            array_push($industry_id, $value[ 'id' ]);
+            array_push($industry_ids, $value[ 'id' ]);
         }
 
 
@@ -46,7 +46,7 @@ class ProductResource extends JsonResource
             'industries' => $industries,
 
             'category_id' => $this->category->id,
-            'industry_id' => $industry_id,
+            'industry_ids' => $industry_ids,
             'badge_ids' => $badge_ids,
         ];
     }
