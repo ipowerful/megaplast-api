@@ -16,7 +16,8 @@ return new class extends Migration {
             $table->id();
             $table->string('name', 50);
             $table->string('name_full', 100)->unique();
-            $table->string('slug', 100)->unique();
+//            $table->string('slug', 100)->unique();
+            $table->string('slug', 100);
             $table->string('article', 20)->unique();
             $table->decimal('price', 9, 0);
             $table->decimal('price_old', 9, 0);
