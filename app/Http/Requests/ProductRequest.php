@@ -48,6 +48,7 @@ class ProductRequest extends FormRequest
             'price.required' => 'Заполните Цену',
             'price.decimal' => 'Цена должна быть числом',
             'price_old.decimal' => 'Старая цена должна быть числом',
+            'measure_id.required' => 'Выберите Единицы измерения',
             'category_id.required' => 'Выберите Категорию',
         ];
     }
