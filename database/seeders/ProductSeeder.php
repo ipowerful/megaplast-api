@@ -29,21 +29,21 @@ class ProductSeeder extends Seeder
         $product->industries()->attach([3, 4]);
         $product->badges()->attach([1, 2]);
 
-//        $product = Product::create([
-//            'id' => 107,
-//            'name' => 'Ящик штабелируемый 770*570*290 мм',
-//            'name_full' => 'Ящик штабелируемый, 770*570*290 мм, вес 3.5 кг, объем 127 л',
-//            'slug' => 'yaschik_shtabeliruemii__770x570x290_mm__ves_3.5_kg__obyem_127_l',
-//            'article' => '7529',
-//            'price' => 1250,
-//            'price_old' => 5000,
-//            'is_popular' => true,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 1,
-//        ]);
-//        $product->industries()->attach(1);
-//        $product->badges()->attach(3);
+        $product = Product::create([
+            'id' => 107,
+            'name' => 'Ящик штабелируемый 770*570*290 мм',
+            'name_full' => 'Ящик штабелируемый, 770*570*290 мм, вес 3.5 кг, объем 127 л',
+            'slug' => 'yaschik_shtabeliruemii__770x570x290_mm__ves_3.5_kg__obyem_127_l',
+            'article' => '7529',
+            'price' => 1250,
+            'price_old' => 5000,
+            'is_popular' => true,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 1,
+        ]);
+        $product->industries()->attach(1);
+        $product->badges()->attach(3);
 //
 //        $product = Product::create([
 //            'id' => 106,
