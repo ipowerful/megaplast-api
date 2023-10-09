@@ -13,13 +13,14 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('product_colors', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->decimal('price', 9, 0);
             $table->decimal('price_old', 9, 0);
             $table->boolean('is_in_stock')->default(false);
             $table->foreignIdFor(Product::class)->unsigned();
             $table->foreignIdFor(Color::class)->unsigned();
             $table->timestamps();
+            $table->json('images');
         });
     }
 
