@@ -35,9 +35,9 @@ class ProductColorSeeder extends Seeder
             'color_id' => 2,
             'images' => array(
                 'https://a.storyblok.com/f/186792/2000x2000/f5b86e72fb/product108-1-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/093873153d/product108-2-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/fe8f108eef/product108-3-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/bcba934354/product108-4-red.jpg'
+                'https://a.storyblok.com/f/186792/2000x2000/ed44b5ebac/product108-2-red.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/ab6527b002/product108-3-red.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/79712f1bc8/product108-4-red.jpg'
             ),
         ]);
     }
