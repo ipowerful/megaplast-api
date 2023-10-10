@@ -350,5 +350,48 @@ class ProductColorSeeder extends Seeder
                 'https://a.storyblok.com/f/186792/2000x2000/16f7ba341e/product51-2-black.jpg',
             ),
         ]);
+
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 3,
+            'color_id' => 2,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/fac757f355/1_jumbo-2-0.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/92ed2f4ac4/2_jumbo-2-0.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/6af9369e4b/3_jumbo-2-0.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/ea7261c508/4_jumbo-2-0.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/0c572bc6ab/5_jumbo-2-0.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 3,
+            'color_id' => 8,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/de21f1f10b/1_jumbo-2-0-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/037ae86334/2_jumbo-2-0-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/6e1ad30784/3_jumbo-2-0-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/d2601be959/4_jumbo-2-0-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/540dc2556c/5_jumbo-2-0-ae.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 3,
+            'color_id' => 6,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/f47f2e91ca/1_jumbo-2-0-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/e029c1eb7c/2_jumbo-2-0-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/aee7c2d027/3_jumbo-2-0-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/01875776d1/4_jumbo-2-0-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/e029c1eb7c/2_jumbo-2-0-o-o.jpg',
+            ),
+        ]);
     }
 }

@@ -180,21 +180,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([1]);
 
-//        $product = Product::create([
-//            'id' => 3,
-//            'name' => 'Ячейка под яйцо 298*298*50 мм',
-//            'name_full' => 'Ячейка под яйцо, 298*298*50 мм, вес 18.5 кг, для яиц до 90 гр',
-//            'slug' => 'yacheika_pod_yaitso__298x298x50_mm__ves_18.5_kg__dlya_yaits_do_90_gr',
-//            'article' => 'Jumbo 2.0',
-//            'price' => 78,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 3,
-//        ]);
-//        $product->industries()->attach([1]);
-//
+        $product = Product::create([
+            'id' => 3,
+            'name' => 'Ячейка под яйцо 298*298*50 мм',
+            'name_full' => 'Ячейка под яйцо, 298*298*50 мм, вес 18.5 кг, для яиц до 90 гр',
+            'slug' => 'yacheika_pod_yaitso__298x298x50_mm__ves_18.5_kg__dlya_yaits_do_90_gr',
+            'article' => 'Jumbo 2.0',
+            'price' => 78,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 3,
+        ]);
+        $product->industries()->attach([1]);
+
 //        $product = Product::create([
 //            'id' => 201,
 //            'name' => 'Ящик E2, 600*400*200 мм',
