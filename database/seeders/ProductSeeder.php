@@ -150,21 +150,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([3, 4]);
 
-//        $product = Product::create([
-//            'id' => 1,
-//            'name' => 'Поддон 1200*900*140 мм',
-//            'name_full' => 'Поддон, 1200*900*140 мм, вес 12.1 кг, штабелируемый на ножках',
-//            'slug' => 'poddon__1200x900x140_mm__ves_12.1_kg__shtabeliruemii_na_nozhkah',
-//            'article' => '12960',
-//            'price' => 8000,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 2,
-//        ]);
-//        $product->industries()->attach([1]);
-//
+        $product = Product::create([
+            'id' => 1,
+            'name' => 'Поддон 1200*900*140 мм',
+            'name_full' => 'Поддон, 1200*900*140 мм, вес 12.1 кг, штабелируемый на ножках',
+            'slug' => 'poddon__1200x900x140_mm__ves_12.1_kg__shtabeliruemii_na_nozhkah',
+            'article' => '12960',
+            'price' => 8000,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 2,
+        ]);
+        $product->industries()->attach([1]);
+
 //        $product = Product::create([
 //            'id' => 2,
 //            'name' => 'Поддон 1200*900*162 мм',

@@ -264,7 +264,7 @@ class ProductColorSeeder extends Seeder
         ProductColor::create([
             'price' => 3150,
             'price_old' => 0,
-            'is_in_stock' => false,
+            'is_in_stock' => true,
             'product_id' => 100,
             'color_id' => 3,
             'images' => array(
@@ -281,7 +281,7 @@ class ProductColorSeeder extends Seeder
         ProductColor::create([
             'price' => 260,
             'price_old' => 0,
-            'is_in_stock' => false,
+            'is_in_stock' => true,
             'product_id' => 101,
             'color_id' => 7,
             'images' => array(
@@ -294,14 +294,37 @@ class ProductColorSeeder extends Seeder
         ProductColor::create([
             'price' => 180,
             'price_old' => 0,
-            'is_in_stock' => false,
+            'is_in_stock' => true,
             'product_id' => 101,
             'color_id' => 4,
             'images' => array(
                 'https://a.storyblok.com/f/186792/2000x2000/ca4005c212/product101-1-black.jpg',
                 'https://a.storyblok.com/f/186792/2000x2000/c32be4b7a0/product101-2-black.jpg',
                 'https://a.storyblok.com/f/186792/2000x2000/c09eadd781/product101-3-black.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/e46d217dc6/product101-4-black.jpg   ',
+                'https://a.storyblok.com/f/186792/2000x2000/e46d217dc6/product101-4-black.jpg',
+            ),
+        ]);
+
+        ProductColor::create([
+            'price' => 9000,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 1,
+            'color_id' => 3,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/2a60228020/product50-1-grey.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/c9a16f4a38/product50-2-grey.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 8000,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 1,
+            'color_id' => 4,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/19abc5b127/product50-1-black.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/dea540aa9f/product50-2-black.jpg',
             ),
         ]);
     }
