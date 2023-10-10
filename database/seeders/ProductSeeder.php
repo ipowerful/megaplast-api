@@ -59,22 +59,22 @@ class ProductSeeder extends Seeder
             'category_id' => 1,
         ]);
         $product->industries()->attach([2, 4]);
-//
-//        $product = Product::create([
-//            'id' => 105,
-//            'name' => 'Решетка для заморозки 1200*800*50 мм',
-//            'name_full' => 'Решетка для заморозки, 1200*800*50 мм, вес 1.68 кг',
-//            'slug' => 'reshetka_dlya_zamorozki__1200x800x50_mm__ves_1.68_kg',
-//            'article' => '12800',
-//            'price' => 1950,
-//            'price_old' => 0,
-//            'is_popular' => true,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 3,
-//        ]);
-//        $product->industries()->attach([5]);
-//
+
+        $product = Product::create([
+            'id' => 105,
+            'name' => 'Решетка для заморозки 1200*800*50 мм',
+            'name_full' => 'Решетка для заморозки, 1200*800*50 мм, вес 1.68 кг',
+            'slug' => 'reshetka_dlya_zamorozki__1200x800x50_mm__ves_1.68_kg',
+            'article' => '12800',
+            'price' => 1950,
+            'price_old' => 0,
+            'is_popular' => true,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 3,
+        ]);
+        $product->industries()->attach([5]);
+
 //        $product = Product::create([
 //            'id' => 104,
 //            'name' => 'Решетка для заморозки 1200*800*50 мм',

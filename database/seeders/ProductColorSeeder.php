@@ -148,5 +148,34 @@ class ProductColorSeeder extends Seeder
                 'https://a.storyblok.com/f/186792/2000x2000/94fbd5dedd/5_64151-e.jpg'
             ),
         ]);
+
+        ProductColor::create([
+            'price' => 1950,
+            'price_old' => 0,
+            'is_in_stock' => false,
+            'product_id' => 105,
+            'color_id' => 6,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/719a774740/1_12800-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/7119c70151/2_12800-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/46c0a94297/3_12800-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/46c0a94297/3_12800-o-o.jpg', // нет 4го изображения
+                'https://a.storyblok.com/f/186792/2000x2000/27ee6d9cca/5_12800-o-o.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 1950,
+            'price_old' => 0,
+            'is_in_stock' => false,
+            'product_id' => 105,
+            'color_id' => 4,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/73397c9549/1_12800-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/5994e1b7cc/2_12800-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/28910b0459/3_12800-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/65a8e42b7b/4_12800-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/1810d52fc0/5_12800-a-e.jpg',
+            ),
+        ]);
     }
 }
