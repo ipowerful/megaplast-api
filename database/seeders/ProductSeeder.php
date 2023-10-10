@@ -210,21 +210,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([5]);
 
-//        $product = Product::create([
-//            'id' => 202,
-//            'name' => 'Ячейка под яйцо, классическая 298*298*50 мм',
-//            'name_full' => 'Ячейка под яйцо, классическая, 298*298*50 мм, вес 0.14 кг, для яиц весом до 90 гр',
-//            'slug' => 'yacheika_pod_yaitso__klassicheskaya__298x298x50_mm__ves_0.14_kg__dlya_yaits_vesom_do_90_gr',
-//            'article' => '3305',
-//            'price' => 78,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 3,
-//        ]);
-//        $product->industries()->attach([1]);
-//
+        $product = Product::create([
+            'id' => 202,
+            'name' => 'Ячейка под яйцо, классическая 298*298*50 мм',
+            'name_full' => 'Ячейка под яйцо, классическая, 298*298*50 мм, вес 0.14 кг, для яиц весом до 90 гр',
+            'slug' => 'yacheika_pod_yaitso__klassicheskaya__298x298x50_mm__ves_0.14_kg__dlya_yaits_vesom_do_90_gr',
+            'article' => '3305',
+            'price' => 78,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 3,
+        ]);
+        $product->industries()->attach([1]);
+
 //        $product = Product::create([
 //            'id' => 203,
 //            'name' => 'Ящик вкладываемый, 600*400*152 мм',
