@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\ProductColor;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -48,6 +49,8 @@ class ProductResource extends JsonResource
             'category_id' => $this->category->id,
             'industry_ids' => $industry_ids,
             'badge_ids' => $badge_ids,
+
+            'colors' => ProductColorResource::collection($this->colors),
         ];
     }
 }
