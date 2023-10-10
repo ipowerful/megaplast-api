@@ -327,5 +327,28 @@ class ProductColorSeeder extends Seeder
                 'https://a.storyblok.com/f/186792/2000x2000/dea540aa9f/product50-2-black.jpg',
             ),
         ]);
+
+        ProductColor::create([
+            'price' => 12000,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 2,
+            'color_id' => 3,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/86480e1e8f/product51-1-grey.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/7d6eae5d17/product51-2-grey.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 11000,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 2,
+            'color_id' => 4,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/bd1b7c80b6/product51-1-black.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/16f7ba341e/product51-2-black.jpg',
+            ),
+        ]);
     }
 }

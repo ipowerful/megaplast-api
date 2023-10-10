@@ -165,21 +165,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([1]);
 
-//        $product = Product::create([
-//            'id' => 2,
-//            'name' => 'Поддон 1200*900*162 мм',
-//            'name_full' => 'Поддон, 1200*900*162 мм, вес 18.5 кг, штабелируемый на лыжах',
-//            'slug' => 'poddon__1200x900x162_mm__ves_18.5_kg__shtabeliruemii_na_lizhah',
-//            'article' => '12961',
-//            'price' => 11000,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 2,
-//        ]);
-//        $product->industries()->attach([1]);
-//
+        $product = Product::create([
+            'id' => 2,
+            'name' => 'Поддон 1200*900*162 мм',
+            'name_full' => 'Поддон, 1200*900*162 мм, вес 18.5 кг, штабелируемый на лыжах',
+            'slug' => 'poddon__1200x900x162_mm__ves_18.5_kg__shtabeliruemii_na_lizhah',
+            'article' => '12961',
+            'price' => 11000,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 2,
+        ]);
+        $product->industries()->attach([1]);
+
 //        $product = Product::create([
 //            'id' => 3,
 //            'name' => 'Ячейка под яйцо 298*298*50 мм',
