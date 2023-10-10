@@ -240,19 +240,19 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([2]);
 
-//        $product = Product::create([
-//            'id' => 204,
-//            'name' => 'Ящик вкладываемый, 600*400*200 мм',
-//            'name_full' => 'Ящик вкладываемый, 600*400*200 мм, 1.7 кг, тяжелый',
-//            'slug' => 'yaschik_vkladivaemii__600x400x200_mm__1.7_kg__tyazhelii',
-//            'article' => '6420',
-//            'price' => 78,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => false,
-//            'measure_id' => 1,
-//            'category_id' => 1,
-//        ]);
-//        $product->industries()->attach([2, 4]);
+        $product = Product::create([
+            'id' => 204,
+            'name' => 'Ящик вкладываемый, 600*400*200 мм',
+            'name_full' => 'Ящик вкладываемый, 600*400*200 мм, 1.7 кг, тяжелый',
+            'slug' => 'yaschik_vkladivaemii__600x400x200_mm__1.7_kg__tyazhelii',
+            'article' => '6420',
+            'price' => 78,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => false,
+            'measure_id' => 1,
+            'category_id' => 1,
+        ]);
+        $product->industries()->attach([2, 4]);
     }
 }

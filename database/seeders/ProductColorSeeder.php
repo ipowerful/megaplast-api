@@ -536,5 +536,51 @@ class ProductColorSeeder extends Seeder
                 'https://a.storyblok.com/f/186792/2000x2000/33e642c3cf/5_6415-a-e.jpg',
             ),
         ]);
+
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 204,
+            'color_id' => 2,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/cf5ef4df52/1_6420.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/d8320d155b/2_6420.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/39afd4dba4/3_6420.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/b399551e95/4_6420.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/c7f2a40a55/5_6420.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/84ac5acdd7/6_6420.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 204,
+            'color_id' => 8,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/008877a94c/1_6420-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/9333dd57de/2_6420-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/d560b05d96/3_6420-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/f3bf03ddbe/4_6420-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/a51775c3db/5_6420-ae.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/3705d70491/6_6420-ae.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 204,
+            'color_id' => 3,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/cdd0830c1d/1_6420-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/6315aa0fe5/2_6420-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/057a5d059e/3_6420-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/5db01326aa/4_6420-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/849012be5d/5_6420-a-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/24427c0c57/6_6420-a-e.jpg',
+            ),
+        ]);
     }
 }
