@@ -195,21 +195,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([1]);
 
-//        $product = Product::create([
-//            'id' => 201,
-//            'name' => 'Ящик E2, 600*400*200 мм',
-//            'name_full' => 'Ящик E2, 600*400*200 мм, 2.0 кг, штабелируемый, сплошной',
-//            'slug' => 'yaschik_e2__600x400x200_mm__2.0_kg__shtabeliruemii__sploshnoi',
-//            'article' => 'E2',
-//            'price' => 78,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 1,
-//        ]);
-//        $product->industries()->attach([5]);
-//
+        $product = Product::create([
+            'id' => 201,
+            'name' => 'Ящик E2, 600*400*200 мм',
+            'name_full' => 'Ящик E2, 600*400*200 мм, 2.0 кг, штабелируемый, сплошной',
+            'slug' => 'yaschik_e2__600x400x200_mm__2.0_kg__shtabeliruemii__sploshnoi',
+            'article' => 'E2',
+            'price' => 78,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 1,
+        ]);
+        $product->industries()->attach([5]);
+
 //        $product = Product::create([
 //            'id' => 202,
 //            'name' => 'Ячейка под яйцо, классическая 298*298*50 мм',

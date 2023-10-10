@@ -393,5 +393,48 @@ class ProductColorSeeder extends Seeder
                 'https://a.storyblok.com/f/186792/2000x2000/e029c1eb7c/2_jumbo-2-0-o-o.jpg',
             ),
         ]);
+
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 201,
+            'color_id' => 2,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/5de9ef17d5/1_e2.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/9ac17dfee7/2_e2.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/81f8a57e5a/3_e2.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/b5385cc411/4_e2.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/29de03db22/5_e2.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 201,
+            'color_id' => 6,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/d0637c5a91/1_e2-o-o1.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/546a18a5f2/2_e2-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/7c04bd89e2/3_e2-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/801410cd34/4_e2-o-o.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/a6fe1352e4/5_e2-o-o.jpg',
+            ),
+        ]);
+        ProductColor::create([
+            'price' => 78,
+            'price_old' => 0,
+            'is_in_stock' => true,
+            'product_id' => 201,
+            'color_id' => 5,
+            'images' => array(
+                'https://a.storyblok.com/f/186792/2000x2000/f4e386466d/1_e2-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/37985b3342/2_e2-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/3a256b7a73/3_e2-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/814644e79e/4_e2-e.jpg',
+                'https://a.storyblok.com/f/186792/2000x2000/7080caf7eb/5_e2-e.jpg',
+            ),
+        ]);
     }
 }
