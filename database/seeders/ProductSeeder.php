@@ -225,21 +225,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([1]);
 
-//        $product = Product::create([
-//            'id' => 203,
-//            'name' => 'Ящик вкладываемый, 600*400*152 мм',
-//            'name_full' => 'Ящик вкладываемый, 600*400*152 мм, 1.35 кг. Евролоток',
-//            'slug' => 'yaschik_vkladivaemii__600x400x152_mm__1.35_kg._evrolotok',
-//            'article' => '6415',
-//            'price' => 78,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => false,
-//            'measure_id' => 1,
-//            'category_id' => 1,
-//        ]);
-//        $product->industries()->attach([2]);
-//
+        $product = Product::create([
+            'id' => 203,
+            'name' => 'Ящик вкладываемый, 600*400*152 мм',
+            'name_full' => 'Ящик вкладываемый, 600*400*152 мм, 1.35 кг. Евролоток',
+            'slug' => 'yaschik_vkladivaemii__600x400x152_mm__1.35_kg._evrolotok',
+            'article' => '6415',
+            'price' => 78,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => false,
+            'measure_id' => 1,
+            'category_id' => 1,
+        ]);
+        $product->industries()->attach([2]);
+
 //        $product = Product::create([
 //            'id' => 204,
 //            'name' => 'Ящик вкладываемый, 600*400*200 мм',
