@@ -90,21 +90,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([5]);
 
-//        $product = Product::create([
-//            'id' => 103,
-//            'name' => 'Решетка для заморозки 1200*1000*50 мм',
-//            'name_full' => 'Решетка для заморозки, 1200*1000*50 мм, вес 2.73 кг',
-//            'slug' => 'reshetka_dlya_zamorozki__1200x1000x50_mm__ves_2.73_kg',
-//            'article' => '12100',
-//            'price' => 2500,
-//            'price_old' => 0,
-//            'is_popular' => true,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 3,
-//        ]);
-//        $product->industries()->attach([5]);
-//
+        $product = Product::create([
+            'id' => 103,
+            'name' => 'Решетка для заморозки 1200*1000*50 мм',
+            'name_full' => 'Решетка для заморозки, 1200*1000*50 мм, вес 2.73 кг',
+            'slug' => 'reshetka_dlya_zamorozki__1200x1000x50_mm__ves_2.73_kg',
+            'article' => '12100',
+            'price' => 2500,
+            'price_old' => 0,
+            'is_popular' => true,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 3,
+        ]);
+        $product->industries()->attach([5]);
+
 //        $product = Product::create([
 //            'id' => 102,
 //            'name' => 'Ящик штабелируемый 1165*775*255 мм',
