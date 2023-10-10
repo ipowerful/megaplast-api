@@ -120,21 +120,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([1, 4]);
 
-//        $product = Product::create([
-//            'id' => 100,
-//            'name' => 'Дивайдер 1200*900*57 мм',
-//            'name_full' => 'Дивайдер, 1200*900*57 мм, вес 3.58 кг',
-//            'slug' => 'divaider__1200x900x57_mm__ves_3.58_kg',
-//            'article' => '1293',
-//            'price' => 3150,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 2,
-//        ]);
-//        $product->industries()->attach([1]);
-//
+        $product = Product::create([
+            'id' => 100,
+            'name' => 'Дивайдер 1200*900*57 мм',
+            'name_full' => 'Дивайдер, 1200*900*57 мм, вес 3.58 кг',
+            'slug' => 'divaider__1200x900x57_mm__ves_3.58_kg',
+            'article' => '1293',
+            'price' => 3150,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 2,
+        ]);
+        $product->industries()->attach([1]);
+
 //        $product = Product::create([
 //            'id' => 101,
 //            'name' => 'Ящик штабелируемый 600*400*135 мм',
