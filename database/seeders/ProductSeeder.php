@@ -135,21 +135,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([1]);
 
-//        $product = Product::create([
-//            'id' => 101,
-//            'name' => 'Ящик штабелируемый 600*400*135 мм',
-//            'name_full' => 'Ящик штабелируемый, 600*400*135 мм, вес 1.15 кг, объем 32.4 л',
-//            'slug' => 'yaschik_shtabeliruemii__600x400x135_mm__ves_1.15_kg__obyem_32.4_l',
-//            'article' => '6413',
-//            'price' => 180,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 1,
-//        ]);
-//        $product->industries()->attach([3, 4]);
-//
+        $product = Product::create([
+            'id' => 101,
+            'name' => 'Ящик штабелируемый 600*400*135 мм',
+            'name_full' => 'Ящик штабелируемый, 600*400*135 мм, вес 1.15 кг, объем 32.4 л',
+            'slug' => 'yaschik_shtabeliruemii__600x400x135_mm__ves_1.15_kg__obyem_32.4_l',
+            'article' => '6413',
+            'price' => 180,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 1,
+        ]);
+        $product->industries()->attach([3, 4]);
+
 //        $product = Product::create([
 //            'id' => 1,
 //            'name' => 'Поддон 1200*900*140 мм',
