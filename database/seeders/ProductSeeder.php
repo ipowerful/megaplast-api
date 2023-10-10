@@ -105,21 +105,21 @@ class ProductSeeder extends Seeder
         ]);
         $product->industries()->attach([5]);
 
-//        $product = Product::create([
-//            'id' => 102,
-//            'name' => 'Ящик штабелируемый 1165*775*255 мм',
-//            'name_full' => 'Ящик штабелируемый, 1165*775*255 мм, вес 9.6 кг, объем 230 л',
-//            'slug' => 'yaschik_shtabeliruemii__1165x775x255_mm__ves_9.6_kg__obyem_230_l',
-//            'article' => '11725',
-//            'price' => 7500,
-//            'price_old' => 0,
-//            'is_popular' => false,
-//            'is_in_stock' => true,
-//            'measure_id' => 1,
-//            'category_id' => 1,
-//        ]);
-//        $product->industries()->attach([1, 4]);
-//
+        $product = Product::create([
+            'id' => 102,
+            'name' => 'Ящик штабелируемый 1165*775*255 мм',
+            'name_full' => 'Ящик штабелируемый, 1165*775*255 мм, вес 9.6 кг, объем 230 л',
+            'slug' => 'yaschik_shtabeliruemii__1165x775x255_mm__ves_9.6_kg__obyem_230_l',
+            'article' => '11725',
+            'price' => 7500,
+            'price_old' => 0,
+            'is_popular' => false,
+            'is_in_stock' => true,
+            'measure_id' => 1,
+            'category_id' => 1,
+        ]);
+        $product->industries()->attach([1, 4]);
+
 //        $product = Product::create([
 //            'id' => 100,
 //            'name' => 'Дивайдер 1200*900*57 мм',
