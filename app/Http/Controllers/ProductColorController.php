@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreProductColorRequest;
-use App\Http\Requests\UpdateProductColorRequest;
+use App\Http\Controllers\BaseController as BaseController;
+use App\Http\Requests\ProductColorsRequest;
 use App\Models\ProductColor;
 
-class ProductColorController extends Controller
+class ProductColorController extends BaseController
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function list(string $product_id)
     {
-        //
+        $productColor = ProductColor::where('product_id', $product_id)->get();
+        return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
     /**

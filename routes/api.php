@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BadgeController;
 use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\ParameterController;
+use App\Http\Controllers\ProductColorController;
 
 
 /*
@@ -35,6 +36,8 @@ Route::apiResource('admin/categories', CategoryController::class);
 Route::apiResource('admin/badges', BadgeController::class);
 Route::apiResource('admin/industries', IndustryController::class);
 Route::apiResource('admin/parameters', ParameterController::class);
+
+Route::get('admin/product-colors/{product_id}', [ProductColorController::class, 'list']);
 
 
 // ------- USER Routes------------
