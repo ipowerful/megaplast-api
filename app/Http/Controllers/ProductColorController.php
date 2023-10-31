@@ -17,6 +17,13 @@ class ProductColorController extends BaseController
         return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
+
+    public function colorsByProduct(string $product_id)
+    {
+        $productColor = ProductColor::where('product_id', $product_id)->get();
+        return $this->sendResponse($productColor, 'Product colors retrieved successfully');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
