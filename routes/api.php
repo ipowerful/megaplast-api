@@ -36,6 +36,7 @@ Route::apiResource('admin/categories', CategoryController::class);
 Route::apiResource('admin/badges', BadgeController::class);
 Route::apiResource('admin/industries', IndustryController::class);
 Route::apiResource('admin/parameters', ParameterController::class);
+Route::apiResource('admin/product-colors', ProductColorController::class);
 
 Route::get('admin/product-colors/{product_id}', [ProductColorController::class, 'colorsByProduct']);
 

@@ -21,6 +21,8 @@ return new class extends Migration {
             $table->foreignIdFor(Color::class)->unsigned();
             $table->timestamps();
             $table->json('images');
+
+            $table->unique(['product_id', 'color_id']);
         });
     }
 

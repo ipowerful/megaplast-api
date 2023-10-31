@@ -8,6 +8,13 @@ use App\Models\ProductColor;
 
 class ProductColorController extends BaseController
 {
+
+    public function colorsByProduct(string $product_id)
+    {
+        $productColor = ProductColor::where('product_id', $product_id)->get();
+        return $this->sendResponse($productColor, 'Product colors retrieved successfully');
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -17,12 +24,6 @@ class ProductColorController extends BaseController
         return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
-
-    public function colorsByProduct(string $product_id)
-    {
-        $productColor = ProductColor::where('product_id', $product_id)->get();
-        return $this->sendResponse($productColor, 'Product colors retrieved successfully');
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -35,9 +36,10 @@ class ProductColorController extends BaseController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductColorRequest $request)
+    public function store(ProductColorsRequest $request)
     {
-        //
+        $productColor = ProductColor::create($request->validated());
+        return $this->sendResponse($productColor, 'Цвет товара успешно добавлен', 201);
     }
 
     /**
@@ -59,9 +61,10 @@ class ProductColorController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductColorRequest $request, ProductColor $productColor)
+    public function update(ProductColorsRequest $request, ProductColor $productColor)
     {
-        //
+        $productColor->update($request->validated());
+        return $this->sendResponse($productColor, 'Цвет товара успешно изменен', 202);
     }
 
     /**
@@ -69,6 +72,7 @@ class ProductColorController extends BaseController
      */
     public function destroy(ProductColor $productColor)
     {
-        //
+        $productColor->delete();
+        return $this->sendResponse([], 'Цвет товара успешно удален');
     }
 }

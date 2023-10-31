@@ -11,7 +11,7 @@ class ProductColorsRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,27 @@ class ProductColorsRequest extends FormRequest
      */
     public function rules(): array
     {
+        $rules = [
+//            'color_id' => 'required|unique_with:product_colors,product_id'
+            'color_id' => 'required',
+            'price' => 'sometimes|required|decimal:0,2',
+            'price_old' => 'sometimes|required|decimal:0,2',
+            'is_in_stock' => 'sometimes|required|boolean',
+            'product_id' => 'sometimes|required|integer',
+            'images' => 'sometimes',
+        ];
+
+        return $rules;
+    }
+
+    public function messages()
+    {
         return [
-            //
+            'color_id.required' => 'Выберите цвет',
+            'color_id.unique_with' => 'Выберите другой цвет. Введенное значние уже существует.',
+            'price.required' => 'Заполните Цену',
+            'price.decimal' => 'Цена должна быть числом',
+            'price_old.decimal' => 'Старая цена должна быть числом',
         ];
     }
 }
