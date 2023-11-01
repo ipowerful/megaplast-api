@@ -55,4 +55,10 @@ class ProductColorController extends BaseController
             return $this->sendError('Ошибка удаления Цвета товара', [], 500);
         }
     }
+
+    public function destroy2($id)
+    {
+        ProductColor::findOrFail($id)->delete();
+        return $this->sendResponse([], 'Цвет товара успешно удален');
+    }
 }
