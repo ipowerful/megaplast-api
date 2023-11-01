@@ -48,7 +48,11 @@ class ProductColorController extends BaseController
      */
     public function destroy(ProductColor $productColor)
     {
-        $productColor->delete();
-        return $this->sendResponse([], 'Цвет товара успешно удален');
+        $result = $productColor->delete();
+        if ($result) {
+            return $this->sendResponse([], 'Цвет товара успешно удален');
+        } else {
+            return $this->sendError('Цвета товара: ошибка удаления');
+        }
     }
 }
