@@ -52,7 +52,7 @@ class ProductColorController extends BaseController
         if ($result) {
             return $this->sendResponse([], 'Цвет товара успешно удален');
         } else {
-            return $this->sendError('Цвета товара: ошибка удаления');
+            return $this->sendError('Ошибка удаления Цвета товара');
         }
     }
 }
