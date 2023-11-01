@@ -18,9 +18,9 @@ class ProductColorController extends BaseController
     /**
      * Display a listing of the resource.
      */
-    public function list(string $product_id)
+    public function index()
     {
-        $productColor = ProductColor::where('product_id', $product_id)->get();
+        $productColor = ProductColor::all();
         return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
