@@ -24,15 +24,6 @@ class ProductColorController extends BaseController
         return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -40,22 +31,6 @@ class ProductColorController extends BaseController
     {
         $productColor = ProductColor::create($request->validated());
         return $this->sendResponse($productColor, 'Цвет товара успешно добавлен', 201);
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(ProductColor $productColor)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(ProductColor $productColor)
-    {
-        //
     }
 
     /**
