@@ -45,7 +45,7 @@ class ProductColorController extends BaseController
      */
     public function update(ProductColorsRequest $request, ProductColor $productColor)
     {
-        $result->update($request->validated());
+        $result = ProductColor::update($request->validated());
         if ($result) {
             $productColor = ProductColor::findOrFail($result->id);
             $productColorResource = new ProductColorResource($productColor);
