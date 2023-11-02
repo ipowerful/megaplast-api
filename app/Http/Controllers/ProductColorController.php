@@ -30,8 +30,14 @@ class ProductColorController extends BaseController
      */
     public function store(ProductColorsRequest $request)
     {
-        $productColor = ProductColor::create($request->validated());
-        return $this->sendResponse($productColor, 'Цвет товара успешно добавлен', 201);
+        $result = ProductColor::create($request->validated());
+        if ($result) {
+            $productColor = ProductColor::findOrFail($result->id);
+            $productColorResource = new ProductColorResource($productColor);
+            return $this->sendResponse($productColorResource, 'Цвет товара успешно добавлен', 201);
+        } else {
+            return $this->sendError('Ошибка добавления Цвета товара', [], 500);
+        }
     }
 
     /**
