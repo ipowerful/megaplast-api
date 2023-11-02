@@ -40,7 +40,11 @@ class ProductColorController extends BaseController
     public function update(ProductColorsRequest $request, ProductColor $productColor)
     {
         $productColor->update($request->validated());
-        return $this->sendResponse($productColor, 'Цвет товара успешно изменен', 202);
+        if ($productColor) {
+            return $this->sendResponse($productColor, 'Цвет товара успешно изменен', 202);
+        } else {
+            return $this->sendError('Ошибка изменения Цвета товара', [], 500);
+        }
     }
 
     /**
