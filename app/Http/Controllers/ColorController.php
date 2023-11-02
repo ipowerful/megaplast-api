@@ -24,7 +24,7 @@ class ColorController extends BaseController
 
     public function index()
     {
-        $colors = Color::all();
+        $colors = Color::all()->sortBy('name')->values();
         return $this->sendResponse($colors, 'Colors retrieved successfully.');
     }
 
