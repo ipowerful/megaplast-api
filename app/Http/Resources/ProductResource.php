@@ -56,7 +56,7 @@ class ProductResource extends JsonResource
             'industry_ids' => $industry_ids,
             'badge_ids' => $badge_ids,
 
-            'colors' => ProductColorResource::collection($this->colors),
+//            'colors' => ProductColorResource::collection($this->colors),
             'color_ids' => $color_ids,
         ];
     }
