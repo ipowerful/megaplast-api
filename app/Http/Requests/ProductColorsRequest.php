@@ -25,7 +25,7 @@ class ProductColorsRequest extends FormRequest
 //            'color_id' => 'required|unique_with:product_colors,product_id'
             'color_id' => 'required',
             'price' => 'sometimes|required|decimal:0,2',
-            'price_old' => 'sometimes|required|decimal:0,2',
+            'price_old' => 'sometimes|decimal:0,2',
             'is_in_stock' => 'sometimes|required|boolean',
             'product_id' => 'sometimes|required|integer',
             'images' => 'sometimes',
