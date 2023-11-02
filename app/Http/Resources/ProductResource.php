@@ -31,10 +31,15 @@ class ProductResource extends JsonResource
             array_push($badge_ids, $value[ 'id' ]);
         }
 
-        $colors = $this->colors()->select('id')->get();
-        $color_ids = [];
-        foreach ($colors as $key => $value) {
-            array_push($color_ids, $value[ 'id' ]);
+//        $colors = $this->colors()->select('id')->get();
+//        $color_ids = [];
+//        foreach ($colors as $key => $value) {
+//            array_push($color_ids, $value[ 'id' ]);
+//        }
+
+        $color_slugs = [];
+        foreach ($this->colors as $color) {
+            array_push($color_slugs, $color->color->slug);
         }
 
         return [
@@ -57,7 +62,8 @@ class ProductResource extends JsonResource
             'badge_ids' => $badge_ids,
 
 //            'colors' => ProductColorResource::collection($this->colors),
-            'color_ids' => $color_ids,
+//            'color_ids' => $color_ids,
+            'color_slugs' => $color_slugs,
         ];
     }
 }
