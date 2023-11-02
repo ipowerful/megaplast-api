@@ -23,7 +23,7 @@ class ProductColorsRequest extends FormRequest
     {
         $rules = [
 //            'color_id' => 'required|unique_with:product_colors,product_id'
-            'color_id' => 'required',
+            'color_id' => 'required|unique:product_colors,color_id,' . $this->color_id . ',id,product_id,' . $this->product_id,
             'price' => 'sometimes|required|decimal:0,2',
             'price_old' => 'sometimes|decimal:0,2',
             'is_in_stock' => 'sometimes|required|boolean',
@@ -38,7 +38,7 @@ class ProductColorsRequest extends FormRequest
     {
         return [
             'color_id.required' => 'Выберите цвет',
-            'color_id.unique_with' => 'Выберите другой цвет. Введенное значние уже существует.',
+            'color_id.unique' => 'Выберите другой цвет. Указанный цвет уже существует.',
             'price.required' => 'Заполните Цену',
             'price.decimal' => 'Цена должна быть числом',
             'price_old.decimal' => 'Старая цена должна быть числом',
