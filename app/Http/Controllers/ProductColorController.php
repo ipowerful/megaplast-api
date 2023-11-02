@@ -45,11 +45,9 @@ class ProductColorController extends BaseController
      */
     public function update(ProductColorsRequest $request, ProductColor $productColor)
     {
-        $result = ProductColor::update($request->validated());
-        if ($result) {
-            $productColor = ProductColor::findOrFail($result->id);
-            $productColorResource = new ProductColorResource($productColor);
-            return $this->sendResponse($productColorResource, 'Цвет товара успешно изменен', 202);
+        $productColor->update($request->validated());
+        if ($productColor) {
+            return $this->sendResponse($productColor, 'Цвет товара успешно изменен', 202);
         } else {
             return $this->sendError('Ошибка изменения Цвета товара', [], 500);
         }
@@ -60,7 +58,8 @@ class ProductColorController extends BaseController
         $result = ProductColor::findOrFail($id)->update($request->validated());
         if ($result) {
             $productColor = ProductColor::findOrFail($id);
-            return $this->sendResponse($productColor, 'Цвет товара успешно изменен', 202);
+            $productColorResource = new ProductColorResource($productColor);
+            return $this->sendResponse($productColorResource, 'Цвет товара успешно изменен', 202);
         } else {
             return $this->sendError('Ошибка изменения Цвета товара', [], 500);
         }
