@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BadgeController;
 use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\ParameterController;
+use App\Http\Controllers\ProductColorController;
 
 
 /*
@@ -35,6 +36,17 @@ Route::apiResource('admin/categories', CategoryController::class);
 Route::apiResource('admin/badges', BadgeController::class);
 Route::apiResource('admin/industries', IndustryController::class);
 Route::apiResource('admin/parameters', ParameterController::class);
+
+Route::delete('admin/pcolors/{id}', [ProductColorController::class, 'destroy2']);
+Route::put('admin/pcolors/{id}', [ProductColorController::class, 'update2']);
+Route::patch('admin/pcolors/{id}', [ProductColorController::class, 'update2']);
+Route::apiResource('admin/pcolors', ProductColorController::class);
+
+Route::get('admin/pcolors/{product_id}', [ProductColorController::class, 'colorsByProduct']);
+
+//Route::get('admin/pcolors', [ProductColorController::class, 'index']);
+//Route::post('admin/pcolors', [ProductColorController::class, 'store']);
+//Route::put('admin/pcolors', [ProductColorController::class, 'create']);
 
 
 // ------- USER Routes------------

@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\belongsTo;
+use Illuminate\Database\Eloquent\Model;
 
 class ProductColor extends Model
 {
     protected $fillable = [
-        'name',
         'price',
         'price_old',
         'is_in_stock',

@@ -31,6 +31,12 @@ class ProductResource extends JsonResource
             array_push($badge_ids, $value[ 'id' ]);
         }
 
+        $colors = $this->colors()->select('id')->get();
+        $color_ids = [];
+        foreach ($colors as $key => $value) {
+            array_push($color_ids, $value[ 'id' ]);
+        }
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -51,6 +57,7 @@ class ProductResource extends JsonResource
             'badge_ids' => $badge_ids,
 
             'colors' => ProductColorResource::collection($this->colors),
+            'color_ids' => $color_ids,
         ];
     }
 }

@@ -54,6 +54,6 @@ class Product extends Model
 
     public function colors(): hasMany
     {
-        return $this->hasMany(ProductColor::class);
+        return $this->hasMany(ProductColor::class)->orderBy('price', 'desc');
     }
 }
