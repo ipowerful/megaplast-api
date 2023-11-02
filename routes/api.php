@@ -38,6 +38,7 @@ Route::apiResource('admin/industries', IndustryController::class);
 Route::apiResource('admin/parameters', ParameterController::class);
 
 Route::delete('admin/pcolors/{id}', [ProductColorController::class, 'destroy2']);
+Route::put('admin/pcolors/{id}', [ProductColorController::class, 'update2']);
 Route::apiResource('admin/pcolors', ProductColorController::class);
 
 Route::get('admin/pcolors/{product_id}', [ProductColorController::class, 'colorsByProduct']);
