@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\ProductColorsRequest;
-use App\Http\Resources\ProductColorResource;
+use App\Http\Resources\ProductColorResourceUser;
 use App\Models\ProductColor;
 
 class ProductColorController extends BaseController
@@ -21,7 +21,7 @@ class ProductColorController extends BaseController
      */
     public function index()
     {
-        $productColor = ProductColorResource::collection(ProductColor::all()->sortByDesc('price')->values());
+        $productColor = ProductColorResourceUser::collection(ProductColor::all()->sortByDesc('price')->values());
         return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
@@ -33,7 +33,7 @@ class ProductColorController extends BaseController
         $result = ProductColor::create($request->validated());
         if ($result) {
             $productColor = ProductColor::findOrFail($result->id);
-            $productColorResource = new ProductColorResource($productColor);
+            $productColorResource = new ProductColorResourceUser($productColor);
             return $this->sendResponse($productColorResource, 'Цвет товара успешно добавлен', 201);
         } else {
             return $this->sendError('Ошибка добавления Цвета товара', [], 500);
@@ -58,7 +58,7 @@ class ProductColorController extends BaseController
         $result = ProductColor::findOrFail($id)->update($request->validated());
         if ($result) {
             $productColor = ProductColor::findOrFail($id);
-            $productColorResource = new ProductColorResource($productColor);
+            $productColorResource = new ProductColorResourceUser($productColor);
             return $this->sendResponse($productColorResource, 'Цвет товара успешно изменен', 202);
         } else {
             return $this->sendError('Ошибка изменения Цвета товара', [], 500);

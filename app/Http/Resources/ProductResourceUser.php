@@ -40,16 +40,16 @@ class ProductResourceUser extends JsonResource
 //            'price_old' => $this->price_old,
             'is_popular' => $this->is_popular,
 //            'is_in_stock' => $this->is_in_stock,
-            'measure_id' => $this->measure->id,
+//            'measure_id' => $this->measure->id,
             'measure_name' => $this->measure->name,
-            'category_name' => $this->category->name,
-            'industries' => $industries,
+//            'category_name' => $this->category->name,
+//            'industries' => $industries,
 
             'category_id' => $this->category->id,
             'industry_ids' => $industry_ids,
             'badge_ids' => $badge_ids,
 
-            'colors' => ProductColorResource::collection($this->colors),
+            'colors' => ProductColorResourceUser::collection($this->colors),
         ];
     }
 }
