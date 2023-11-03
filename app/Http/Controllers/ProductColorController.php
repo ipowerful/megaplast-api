@@ -21,7 +21,7 @@ class ProductColorController extends BaseController
      */
     public function index()
     {
-        $productColor = ProductColorResourceUser::collection(ProductColor::all()->sortByDesc('price')->values());
+        $productColor = ProductColor::all()->sortByDesc('price')->values();
         return $this->sendResponse($productColor, 'Product colors retrieved successfully');
     }
 
