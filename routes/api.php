@@ -50,7 +50,7 @@ Route::get('admin/pcolors/{product_id}', [ProductColorController::class, 'colors
 
 
 // ------- USER Routes------------
-Route::get('user/products', [ProductController::class, 'userIndex']);
+Route::get('user/products', [ProductController::class, 'indexUser']);
 Route::get('user/products/{product}', [ProductController::class, 'userShow']);
 
 Route::get('user/categories', [CategoryController::class, 'index']);

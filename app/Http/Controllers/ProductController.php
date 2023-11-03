@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\ProductRequest;
-use App\Http\Resources\ProductResource;
+use App\Http\Resources\ProductResourceAdmin;
+use App\Http\Resources\ProductResourceUser;
 use App\Models\Product;
 
 class ProductController extends BaseController
@@ -14,13 +15,13 @@ class ProductController extends BaseController
      */
     public function index()
     {
-        $products = ProductResource::collection(Product::all());
+        $products = ProductResourceAdmin::collection(Product::all());
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
-    public function userIndex()
+    public function indexUser()
     {
-        $products = ProductResource::collection(Product::all());
+        $products = ProductResourceUser::collection(Product::all());
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
