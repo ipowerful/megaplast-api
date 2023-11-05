@@ -15,7 +15,7 @@ class BadgeController extends BaseController
      */
     public function index()
     {
-        $badges = BadgeResource::collection(Badge::all());
+        $badges = Badge::all();
         return $this->sendResponse($badges, 'Badges retrieved successfully.');
     }
 
