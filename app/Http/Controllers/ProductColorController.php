@@ -33,8 +33,8 @@ class ProductColorController extends BaseController
         $result = ProductColor::create($request->validated());
         if ($result) {
             $productColor = ProductColor::findOrFail($result->id);
-            $productColorResource = new ProductColorResourceUser($productColor);
-            return $this->sendResponse($productColorResource, 'Цвет товара успешно добавлен', 201);
+//            $productColorResource = new ProductColorResourceUser($productColor);
+            return $this->sendResponse($productColor, 'Цвет товара успешно добавлен', 201);
         } else {
             return $this->sendError('Ошибка добавления Цвета товара', [], 500);
         }
