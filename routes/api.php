@@ -10,6 +10,7 @@ use App\Http\Controllers\BadgeController;
 use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\ParameterController;
 use App\Http\Controllers\ProductColorController;
+use App\Http\Controllers\ImageController;
 
 
 /*
@@ -48,6 +49,7 @@ Route::get('admin/pcolors/{product_id}', [ProductColorController::class, 'colors
 //Route::post('admin/pcolors', [ProductColorController::class, 'store']);
 //Route::put('admin/pcolors', [ProductColorController::class, 'create']);
 
+Route::apiResource('admin/images', ImageController::class);
 
 // ------- USER Routes------------
 Route::get('user/products', [ProductController::class, 'indexUser']);
