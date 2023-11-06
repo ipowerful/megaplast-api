@@ -13,6 +13,7 @@ class ProductColorSeeder extends Seeder
     public function run(): void
     {
         ProductColor::create([
+            'id' => 1,
             'price' => 900,
             'price_old' => 0,
             'is_in_stock' => true,
@@ -26,6 +27,7 @@ class ProductColorSeeder extends Seeder
             ),
         ]);
         ProductColor::create([
+            'id' => 2,
             'price' => 900,
             'price_old' => 0,
             'is_in_stock' => true,

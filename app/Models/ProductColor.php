@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\belongsTo;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\hasMany;
 
 class ProductColor extends Model
 {
@@ -26,5 +27,10 @@ class ProductColor extends Model
     public function color(): belongsTo
     {
         return $this->belongsTo(Color::class);
+    }
+
+    public function image(): hasMany
+    {
+        return $this->hasMany(Image::class);
     }
 }

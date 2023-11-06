@@ -22,6 +22,7 @@ class ImageStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'product_color_id' => 'sometimes|required|integer',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }
