@@ -358,6 +358,27 @@ class ImageSeeder extends Seeder
                 'imageBase' => '{id}_3305-ae-yellow.jpg',
                 'imageCount' => 5,
             ],
+
+            (object)[
+                'id' => 35,
+                'imageBase' => '{id}_6415.jpg',
+                'imageCount' => 5,
+            ],
+            (object)[
+                'id' => 36,
+                'imageBase' => '{id}_6415-o-o.jpg',
+                'imageCount' => 5,
+            ],
+            (object)[
+                'id' => 37,
+                'imageBase' => '{id}_6415-ae.jpg',
+                'imageCount' => 5,
+            ],
+            (object)[
+                'id' => 38,
+                'imageBase' => '{id}_6415-a-e.jpg',
+                'imageCount' => 5,
+            ],
         ];
         ImageSeeder::createImage($items);
 
