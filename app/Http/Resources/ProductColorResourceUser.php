@@ -14,6 +14,11 @@ class ProductColorResourceUser extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        $images = [];
+        foreach ($this->images as $image) {
+            array_push($images, $image->filename);
+        }
+
         return [
             'id' => $this->id,
             'name' => $this->color->name,
@@ -21,7 +26,7 @@ class ProductColorResourceUser extends JsonResource
             'price' => $this->price,
             'price_old' => $this->price_old,
             'is_in_stock' => $this->is_in_stock,
-            'images' => $this->images,
+            'images' => $images,
         ];
     }
 }

@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->boolean('is_in_stock')->default(false);
             $table->foreignIdFor(Product::class)->unsigned();
             $table->foreignIdFor(Color::class)->unsigned();
-            $table->json('images');
             $table->timestamps();
 
             $table->unique(['product_id', 'color_id']);
