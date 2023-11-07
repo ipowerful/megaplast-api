@@ -203,6 +203,27 @@ class ImageSeeder extends Seeder
                     '5_64151-e.jpg',
                 ],
             ],
+
+            (object)[
+                'id' => 11,
+                'images' => [
+                    '1_12800-o-o.jpg',
+                    '2_12800-o-o.jpg',
+                    '3_12800-o-o.jpg',
+                    '3_12800-o-o.jpg', // нет 4го изображения
+                    '5_12800-o-o.jpg',
+                ],
+            ],
+            (object)[
+                'id' => 12,
+                'images' => [
+                    '1_12800-a-e.jpg',
+                    '2_12800-a-e.jpg',
+                    '3_12800-a-e.jpg',
+                    '4_12800-a-e.jpg',
+                    '5_12800-a-e.jpg',
+                ],
+            ],
         ];
         ImageSeeder::createImage($items);
 
