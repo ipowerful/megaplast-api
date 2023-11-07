@@ -326,6 +326,22 @@ class ImageSeeder extends Seeder
                 'imageBase' => '{id}_jumbo-2-0-o-o.jpg', // нет 5 изображения
                 'imageCount' => 5,
             ],
+
+            (object)[
+                'id' => 29,
+                'imageBase' => '{id}_e2.jpg',
+                'imageCount' => 5,
+            ],
+            (object)[
+                'id' => 30,
+                'imageBase' => '{id}_e2.jpg',
+                'imageCount' => 5,
+            ],
+            (object)[
+                'id' => 31,
+                'imageBase' => '{id}_e2-e.jpg',
+                'imageCount' => 5,
+            ],
         ];
         ImageSeeder::createImage($items);
 
