@@ -260,6 +260,17 @@ class ImageSeeder extends Seeder
                     '4_12100-a-e.jpg',
                 ],
             ],
+
+            (object)[
+                'id' => 17,
+                'imageBase' => '{id}_11725-yellow.jpg',
+                'imageCount' => 5,
+            ],
+            (object)[
+                'id' => 18,
+                'imageBase' => '{id}_11725-blue.jpg',
+                'imageCount' => 5,
+            ],
         ];
         ImageSeeder::createImage($items);
 
@@ -269,13 +280,26 @@ class ImageSeeder extends Seeder
     {
         foreach ($items as $item) {
             $index = 1;
-            foreach ($item->images as $image) {
-                Image::create([
-                    'product_color_id' => $item->id,
-                    'image' => '/images/product/' . $image,
-                    'sort_order' => $index,
-                ]);
-                $index++;
+
+            if (isset($item->images)) {
+
+                foreach ($item->images as $image) {
+                    Image::create([
+                        'product_color_id' => $item->id,
+                        'image' => '/images/product/' . $image,
+                        'sort_order' => $index,
+                    ]);
+                    $index++;
+                }
+            } else {
+                for ($i = 1; $i <= $item->imageCount; $i++) {
+                    Image::create([
+                        'product_color_id' => $item->id,
+                        'image' => '/images/product/' . str_replace('{id}', $index, $item->imageBase),
+                        'sort_order' => $index,
+                    ]);
+                    $index++;
+                }
             }
         }
     }
