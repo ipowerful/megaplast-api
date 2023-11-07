@@ -31,6 +31,6 @@ class ProductColor extends Model
 
     public function image(): hasMany
     {
-        return $this->hasMany(Image::class);
+        return $this->hasMany(Image::class)->orderBy('sort_order');
     }
 }

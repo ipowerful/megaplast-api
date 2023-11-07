@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->id();
             $table->string('image');
             $table->foreignIdFor(ProductColor::class)->unsigned();
+            $table->integer('sort_order');
             $table->timestamps();
         });
     }

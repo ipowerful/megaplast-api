@@ -19,12 +19,7 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 108,
             'color_id' => 3,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/bc5545b69e/product108-1-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/093873153d/product108-2-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/fe8f108eef/product108-3-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/bcba934354/product108-4-grey.jpg'
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 2,
@@ -33,26 +28,17 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 108,
             'color_id' => 2,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/f5b86e72fb/product108-1-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/ed44b5ebac/product108-2-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/ab6527b002/product108-3-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/79712f1bc8/product108-4-red.jpg'
-            ),
+            'images' => array(),
         ]);
 
         ProductColor::create([
+            'id' => 3,
             'price' => 3960,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 107,
             'color_id' => 1,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/5e4a0ea734/product107-1-yellow.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/de9d19cbfa/product107-2-yellow.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/356c7b7919/product107-3-yellow.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/ac39deccd1/product107-4-yellow.jpg'
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
             'price' => 3960,
