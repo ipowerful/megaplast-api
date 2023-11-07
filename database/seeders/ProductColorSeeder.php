@@ -41,17 +41,13 @@ class ProductColorSeeder extends Seeder
             'images' => array(),
         ]);
         ProductColor::create([
+            'id' => 4,
             'price' => 3960,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 107,
             'color_id' => 2,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/34237b0136/product107-1-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/e83f6372c3/product107-2-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/cef7af114d/product107-3-red.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/f91dbe2fb9/product107-4-red.jpg'
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
             'price' => 2500,
