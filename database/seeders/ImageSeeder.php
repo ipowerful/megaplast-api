@@ -371,7 +371,7 @@ class ImageSeeder extends Seeder
             ],
             (object)[
                 'id' => 37,
-                'imageBase' => '{id}_6415-ae.jpg',
+                'imageBase' => '{id}_6415-ae.jpg', // нет 3 изображения
                 'imageCount' => 5,
             ],
             (object)[
