@@ -69,60 +69,40 @@ class ProductColorSeeder extends Seeder
         ]);
 
         ProductColor::create([
+            'id' => 7,
             'price' => 210,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 2,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/fd34919656/1_64151.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/6b30beeb85/2_64151.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/dce9fcc0b0/3_64151.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/9a5efd476f/4_64151.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/615b6c8efd/5_64151.jpg'
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
+            'id' => 8,
             'price' => 170,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 4,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/395f8a8f91/1_64151-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/834a26da61/2_64151-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/dbb75ae669/3_64151-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/e4897c859c/4_64151-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/671ab25133/5_64151-a-e.jpg'
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
+            'id' => 9,
             'price' => 180,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 3,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/7c9bc630f2/1_64151-ae.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/b833231d90/2_64151-ae.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/688e53ae2f/3_64151-ae.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/89efae9c3c/4_64151-ae.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/f93ae007ae/5_64151-ae.jpg'
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
+            'id' => 10,
             'price' => 180,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 5,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/27cb33399b/1_64151-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/12be1863f3/2_64151-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/2407ad0566/3_64151-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/983ddd7249/4_64151-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/94fbd5dedd/5_64151-e.jpg'
-            ),
+            'images' => array(),
         ]);
 
         ProductColor::create([

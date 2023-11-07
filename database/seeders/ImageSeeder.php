@@ -143,5 +143,83 @@ class ImageSeeder extends Seeder
             'image' => '/images/product/product107-4-black.jpg',
             'sort_order' => 4,
         ]);
+
+
+        Image::create([
+            'product_color_id' => 7,
+            'image' => '/images/product/1_64151.jpg',
+            'sort_order' => 1,
+        ]);
+        Image::create([
+            'product_color_id' => 7,
+            'image' => '/images/product/2_64151.jpg',
+            'sort_order' => 2,
+        ]);
+        Image::create([
+            'product_color_id' => 7,
+            'image' => '/images/product/3_64151.jpg',
+            'sort_order' => 3,
+        ]);
+        Image::create([
+            'product_color_id' => 7,
+            'image' => '/images/product/4_64151.jpg',
+            'sort_order' => 4,
+        ]);
+        Image::create([
+            'product_color_id' => 7,
+            'image' => '/images/product/5_64151.jpg',
+            'sort_order' => 5,
+        ]);
+
+
+        $items = [
+            (object)[
+                'id' => 8,
+                'images' => [
+                    '1_64151-a-e.jpg',
+                    '2_64151-a-e.jpg',
+                    '3_64151-a-e.jpg',
+                    '4_64151-a-e.jpg',
+                    '5_64151-a-e.jpg',
+                ],
+            ],
+            (object)[
+                'id' => 9,
+                'images' => [
+                    '1_64151-ae.jpg',
+                    '2_64151-ae.jpg',
+                    '3_64151-ae.jpg',
+                    '4_64151-ae.jpg',
+                    '5_64151-ae.jpg',
+                ],
+            ],
+            (object)[
+                'id' => 10,
+                'images' => [
+                    '1_64151-e.jpg',
+                    '2_64151-e.jpg',
+                    '3_64151-e.jpg',
+                    '4_64151-e.jpg',
+                    '5_64151-e.jpg',
+                ],
+            ],
+        ];
+        ImageSeeder::createImage($items);
+
+    }
+
+    public function createImage($items): void
+    {
+        foreach ($items as $item) {
+            $index = 1;
+            foreach ($item->images as $image) {
+                Image::create([
+                    'product_color_id' => $item->id,
+                    'image' => '/images/product/' . $image,
+                    'sort_order' => $index,
+                ]);
+                $index++;
+            }
+        }
     }
 }
