@@ -182,20 +182,13 @@ class ProductColorSeeder extends Seeder
         ]);
 
         ProductColor::create([
+            'id' => 19,
             'price' => 3150,
             'price_old' => 0,
             'is_in_stock' => true,
             'product_id' => 100,
             'color_id' => 3,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/e7fa4a4335/product100-1-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/6adfa1ef08/product100-2-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/298e78cf06/product100-3-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/f00a7838a1/product100-4-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/9178e9c548/product100-5-grey.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/24b57599d2/product100-6-grey.jpg',
-                'https://a.storyblok.com/f/186792/3000x1800/c72e3c4b76/product100-7-grey.jpg',
-            ),
+            'images' => array(),
         ]);
 
         ProductColor::create([
