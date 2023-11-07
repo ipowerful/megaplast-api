@@ -99,5 +99,49 @@ class ImageSeeder extends Seeder
             'image' => '/images/product/product107-4-red.jpg',
             'sort_order' => 4,
         ]);
+
+
+        Image::create([
+            'product_color_id' => 5,
+            'image' => '/images/product/product107-1-grey.jpg',
+            'sort_order' => 1,
+        ]);
+        Image::create([
+            'product_color_id' => 5,
+            'image' => '/images/product/product107-2-grey.jpg',
+            'sort_order' => 2,
+        ]);
+        Image::create([
+            'product_color_id' => 5,
+            'image' => '/images/product/product107-3-grey.jpg',
+            'sort_order' => 3,
+        ]);
+        Image::create([
+            'product_color_id' => 5,
+            'image' => '/images/product/product107-4-grey.jpg',
+            'sort_order' => 4,
+        ]);
+
+
+        Image::create([
+            'product_color_id' => 6,
+            'image' => '/images/product/product107-1-black.jpg',
+            'sort_order' => 1,
+        ]);
+        Image::create([
+            'product_color_id' => 6,
+            'image' => '/images/product/product107-2-black.jpg',
+            'sort_order' => 2,
+        ]);
+        Image::create([
+            'product_color_id' => 6,
+            'image' => '/images/product/product107-3-black.jpg',
+            'sort_order' => 3,
+        ]);
+        Image::create([
+            'product_color_id' => 6,
+            'image' => '/images/product/product107-4-black.jpg',
+            'sort_order' => 4,
+        ]);
     }
 }
