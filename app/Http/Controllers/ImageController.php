@@ -36,7 +36,7 @@ class ImageController extends BaseController
 //        exit;
 
 
-        if (Storage::delete($image->image)) {
+        if (Storage::delete($image->filename)) {
             $image->delete();
         }
 
