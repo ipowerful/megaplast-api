@@ -222,6 +222,25 @@ class ImageSeeder extends Seeder
                     '4_12800-a-e.jpg',
                 ],
             ],
+
+            (object)[
+                'id' => 13,
+                'images' => [
+                    '1_12801-o-o.jpg',
+                    '2_12801-o-o.jpg',
+                    '3_12801-o-o.jpg',
+                    '4_12801-o-o.jpg',
+                ],
+            ],
+            (object)[
+                'id' => 14,
+                'images' => [
+                    '1_12801-a-e.jpg',
+                    '2_12801-a-e.jpg',
+                    '3_12801-a-e.jpg',
+                    '4_12801-a-e.jpg',
+                ],
+            ],
         ];
         ImageSeeder::createImage($items);
 

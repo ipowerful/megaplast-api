@@ -125,30 +125,22 @@ class ProductColorSeeder extends Seeder
         ]);
 
         ProductColor::create([
+            'id' => 13,
             'price' => 2250,
             'price_old' => 0,
             'is_in_stock' => false,
             'product_id' => 104,
             'color_id' => 6,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/d25a960de5/1_12801-o-o.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/94fa8bca95/2_12801-o-o.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/f4e1ffead6/3_12801-o-o.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/617a73dc30/4_12801-o-o.jpg',
-            ),
+            'images' => array(),
         ]);
         ProductColor::create([
+            'id' => 14,
             'price' => 2250,
             'price_old' => 0,
             'is_in_stock' => false,
             'product_id' => 104,
             'color_id' => 4,
-            'images' => array(
-                'https://a.storyblok.com/f/186792/2000x2000/e06d967035/1_12801-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/b891699487/2_12801-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/922f9f60f9/3_12801-a-e.jpg',
-                'https://a.storyblok.com/f/186792/2000x2000/13a13bfabe/4_12801-ae-e.jpg',
-            ),
+            'images' => array(),
         ]);
 
         ProductColor::create([
