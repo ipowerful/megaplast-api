@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\ProductColorsRequest;
-use App\Http\Resources\ProductColorResource;
+use App\Http\Resources\ProductColorResourceAdmin;
 use App\Models\ProductColor;
 
 class ProductColorController extends BaseController
@@ -22,7 +22,7 @@ class ProductColorController extends BaseController
     public function index()
     {
         $productColor = ProductColor::all()->sortByDesc('price')->values();
-        $productColorResource = ProductColorResource::collection($productColor);
+        $productColorResource = ProductColorResourceAdmin::collection($productColor);
         return $this->sendResponse($productColorResource, 'Product colors retrieved successfully');
     }
 
