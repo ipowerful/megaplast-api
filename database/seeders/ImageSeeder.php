@@ -299,6 +299,17 @@ class ImageSeeder extends Seeder
                 'imageBase' => 'product50-{id}-black.jpg',
                 'imageCount' => 2,
             ],
+
+            (object)[
+                'id' => 24,
+                'imageBase' => 'product51-{id}-grey.jpg',
+                'imageCount' => 2,
+            ],
+            (object)[
+                'id' => 25,
+                'imageBase' => 'product51-{id}-black.jpg',
+                'imageCount' => 2,
+            ],
         ];
         ImageSeeder::createImage($items);
 
