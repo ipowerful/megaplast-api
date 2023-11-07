@@ -15,11 +15,11 @@ class ImageSeeder extends Seeder
     {
         Image::create([
             'product_color_id' => 1,
-            'image' => 'images/product/product108-1-grey.jpg',
+            'image' => '/images/product/product108-1-grey.jpg',
         ]);
         Image::create([
             'product_color_id' => 1,
-            'image' => 'images/product/product108-2-grey.jpg'
+            'image' => '/images/product/product108-2-grey.jpg'
         ]);
         Image::create([
             'product_color_id' => 1,
@@ -27,24 +27,24 @@ class ImageSeeder extends Seeder
         ]);
         Image::create([
             'product_color_id' => 1,
-            'image' => 'images/product/product108-4-grey.jpg',
+            'image' => '/images/product/product108-4-grey.jpg',
         ]);
 
         Image::create([
             'product_color_id' => 2,
-            'image' => 'images/product/product108-1-red.jpg',
+            'image' => '/images/product/product108-1-red.jpg',
         ]);
         Image::create([
             'product_color_id' => 2,
-            'image' => 'images/product/product108-2-red.jpg'
+            'image' => '/images/product/product108-2-red.jpg'
         ]);
         Image::create([
             'product_color_id' => 2,
-            'image' => 'images/product/product108-3-red.jpg',
+            'image' => '/images/product/product108-3-red.jpg',
         ]);
         Image::create([
             'product_color_id' => 2,
-            'image' => 'images/product/product108-4-red.jpg',
+            'image' => '/images/product/product108-4-red.jpg',
         ]);
     }
 }
