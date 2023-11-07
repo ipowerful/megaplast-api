@@ -13,166 +13,45 @@ class ImageSeeder extends Seeder
      */
     public function run(): void
     {
-        Image::create([
-            'product_color_id' => 1,
-            'image' => '/images/product/product108-1-grey.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 1,
-            'image' => '/images/product/product108-2-grey.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 1,
-            'image' => '/images/product/product108-3-grey.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 1,
-            'image' => '/images/product/product108-4-grey.jpg',
-            'sort_order' => 4,
-        ]);
-
-
-        Image::create([
-            'product_color_id' => 2,
-            'image' => '/images/product/product108-1-red.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 2,
-            'image' => '/images/product/product108-2-red.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 2,
-            'image' => '/images/product/product108-3-red.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 2,
-            'image' => '/images/product/product108-4-red.jpg',
-            'sort_order' => 4,
-        ]);
-
-
-        Image::create([
-            'product_color_id' => 3,
-            'image' => '/images/product/product107-1-yellow.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 3,
-            'image' => '/images/product/product107-2-yellow.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 3,
-            'image' => '/images/product/product107-3-yellow.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 3,
-            'image' => '/images/product/product107-4-yellow.jpg',
-            'sort_order' => 4,
-        ]);
-
-
-        Image::create([
-            'product_color_id' => 4,
-            'image' => '/images/product/product107-1-red.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 4,
-            'image' => '/images/product/product107-2-red.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 4,
-            'image' => '/images/product/product107-3-red.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 4,
-            'image' => '/images/product/product107-4-red.jpg',
-            'sort_order' => 4,
-        ]);
-
-
-        Image::create([
-            'product_color_id' => 5,
-            'image' => '/images/product/product107-1-grey.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 5,
-            'image' => '/images/product/product107-2-grey.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 5,
-            'image' => '/images/product/product107-3-grey.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 5,
-            'image' => '/images/product/product107-4-grey.jpg',
-            'sort_order' => 4,
-        ]);
-
-
-        Image::create([
-            'product_color_id' => 6,
-            'image' => '/images/product/product107-1-black.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 6,
-            'image' => '/images/product/product107-2-black.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 6,
-            'image' => '/images/product/product107-3-black.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 6,
-            'image' => '/images/product/product107-4-black.jpg',
-            'sort_order' => 4,
-        ]);
-
-
-        Image::create([
-            'product_color_id' => 7,
-            'image' => '/images/product/1_64151.jpg',
-            'sort_order' => 1,
-        ]);
-        Image::create([
-            'product_color_id' => 7,
-            'image' => '/images/product/2_64151.jpg',
-            'sort_order' => 2,
-        ]);
-        Image::create([
-            'product_color_id' => 7,
-            'image' => '/images/product/3_64151.jpg',
-            'sort_order' => 3,
-        ]);
-        Image::create([
-            'product_color_id' => 7,
-            'image' => '/images/product/4_64151.jpg',
-            'sort_order' => 4,
-        ]);
-        Image::create([
-            'product_color_id' => 7,
-            'image' => '/images/product/5_64151.jpg',
-            'sort_order' => 5,
-        ]);
-
-
         $items = [
+            (object)[
+                'id' => 1,
+                'imageBase' => 'product108-{id}-grey.jpg',
+                'imageCount' => 4,
+            ],
+            (object)[
+                'id' => 2,
+                'imageBase' => 'product108-{id}-red.jpg',
+                'imageCount' => 4,
+            ],
+
+            (object)[
+                'id' => 3,
+                'imageBase' => 'product107-{id}-yellow.jpg',
+                'imageCount' => 4,
+            ],
+            (object)[
+                'id' => 4,
+                'imageBase' => 'product107-{id}-red.jpg',
+                'imageCount' => 4,
+            ],
+            (object)[
+                'id' => 5,
+                'imageBase' => 'product107-{id}-grey.jpg',
+                'imageCount' => 4,
+            ],
+            (object)[
+                'id' => 6,
+                'imageBase' => 'product107-{id}-black.jpg',
+                'imageCount' => 4,
+            ],
+
+            (object)[
+                'id' => 7,
+                'imageBase' => '{id}_64151.jpg',
+                'imageCount' => 5,
+            ],
+
             (object)[
                 'id' => 8,
                 'images' => [
@@ -410,7 +289,7 @@ class ImageSeeder extends Seeder
                 foreach ($item->images as $image) {
                     Image::create([
                         'product_color_id' => $item->id,
-                        'image' => '/images/product/' . $image,
+                        'filename' => '/images/product/' . $image,
                         'sort_order' => $index,
                     ]);
                     $index++;
@@ -419,7 +298,7 @@ class ImageSeeder extends Seeder
                 for ($i = 1; $i <= $item->imageCount; $i++) {
                     Image::create([
                         'product_color_id' => $item->id,
-                        'image' => '/images/product/' . str_replace('{id}', $index, $item->imageBase),
+                        'filename' => '/images/product/' . str_replace('{id}', $index, $item->imageBase),
                         'sort_order' => $index,
                     ]);
                     $index++;

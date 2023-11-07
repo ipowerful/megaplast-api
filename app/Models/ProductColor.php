@@ -14,14 +14,12 @@ class ProductColor extends Model
         'is_in_stock',
         'product_id',
         'color_id',
-        'images',
     ];
 
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
     protected $casts = [
         'is_in_stock' => 'boolean',
-        'images' => 'array',
     ];
 
     public function color(): belongsTo
@@ -29,7 +27,7 @@ class ProductColor extends Model
         return $this->belongsTo(Color::class);
     }
 
-    public function image(): hasMany
+    public function images(): hasMany
     {
         return $this->hasMany(Image::class)->orderBy('sort_order');
     }

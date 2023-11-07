@@ -16,8 +16,8 @@ class ProductColorResource extends JsonResource
     {
 
         $images = [];
-        foreach ($this->image as $image) {
-            array_push($images, $image->image);
+        foreach ($this->images as $image) {
+            array_push($images, $image->filename);
         }
 
         return [

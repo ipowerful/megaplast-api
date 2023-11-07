@@ -19,7 +19,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 108,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 2,
@@ -28,7 +27,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 108,
             'color_id' => 2,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -38,7 +36,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 107,
             'color_id' => 1,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 4,
@@ -47,7 +44,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 107,
             'color_id' => 2,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 5,
@@ -56,7 +52,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 107,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 6,
@@ -65,7 +60,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 107,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -75,7 +69,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 2,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 8,
@@ -84,7 +77,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 4,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 9,
@@ -93,7 +85,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 10,
@@ -102,7 +93,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 106,
             'color_id' => 5,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -112,7 +102,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 105,
             'color_id' => 6,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 12,
@@ -121,7 +110,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 105,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -131,7 +119,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 104,
             'color_id' => 6,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 14,
@@ -140,7 +127,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 104,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -150,7 +136,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 103,
             'color_id' => 6,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 16,
@@ -159,7 +144,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 103,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -169,7 +153,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 102,
             'color_id' => 1,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 18,
@@ -178,7 +161,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => false,
             'product_id' => 102,
             'color_id' => 6,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -188,7 +170,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 100,
             'color_id' => 3,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -198,7 +179,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 101,
             'color_id' => 7,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 21,
@@ -207,7 +187,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 101,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -217,7 +196,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 1,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 23,
@@ -226,7 +204,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 1,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -236,7 +213,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 2,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 25,
@@ -245,7 +221,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 2,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -255,7 +230,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 3,
             'color_id' => 2,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 27,
@@ -264,7 +238,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 3,
             'color_id' => 8,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 28,
@@ -273,7 +246,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 3,
             'color_id' => 6,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -283,7 +255,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 201,
             'color_id' => 2,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 30,
@@ -292,7 +263,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 201,
             'color_id' => 6,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 31,
@@ -301,7 +271,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 201,
             'color_id' => 5,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -311,7 +280,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 202,
             'color_id' => 6,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 33,
@@ -320,7 +288,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 202,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 34,
@@ -329,7 +296,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 202,
             'color_id' => 8,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -339,7 +305,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 203,
             'color_id' => 2,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 36,
@@ -348,7 +313,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 203,
             'color_id' => 6,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 37,
@@ -357,7 +321,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 203,
             'color_id' => 3,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 38,
@@ -366,7 +329,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 203,
             'color_id' => 4,
-            'images' => array(),
         ]);
 
         ProductColor::create([
@@ -376,7 +338,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 204,
             'color_id' => 2,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 40,
@@ -385,7 +346,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 204,
             'color_id' => 8,
-            'images' => array(),
         ]);
         ProductColor::create([
             'id' => 41,
@@ -394,7 +354,6 @@ class ProductColorSeeder extends Seeder
             'is_in_stock' => true,
             'product_id' => 204,
             'color_id' => 3,
-            'images' => array(),
         ]);
     }
 }

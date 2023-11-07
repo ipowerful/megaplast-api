@@ -13,7 +13,7 @@ return new class extends Migration {
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->string('filename');
             $table->foreignIdFor(ProductColor::class)->unsigned();
             $table->integer('sort_order');
             $table->timestamps();

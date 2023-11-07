@@ -20,7 +20,7 @@ class ImageController extends BaseController
     {
 
         $validatedData = $request->validated();
-        $validatedData[ 'image' ] = $request->file('image')->store('public/images/product');
+        $validatedData[ 'filename' ] = $request->file('filename')->store('public/images/product');
         $data = Image::create($validatedData);
 
         //return response($data, Response::HTTP_CREATED);
