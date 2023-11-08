@@ -23,7 +23,8 @@ class ImageStoreRequest extends FormRequest
     {
         return [
             'product_color_id' => 'sometimes|required|integer',
-            'filename' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'sort_order' => 'sometimes|required|integer',
+            'filename' => 'required|image|mimes:jpg,png,jpeg|max:2048',
         ];
     }
 }
