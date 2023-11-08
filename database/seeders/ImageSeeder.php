@@ -289,7 +289,7 @@ class ImageSeeder extends Seeder
                 foreach ($item->images as $image) {
                     Image::create([
                         'product_color_id' => $item->id,
-                        'filename' => 'images/product/' . $image,
+                        'filename' => 'public/images/product/' . $image,
                         'sort_order' => $index,
                     ]);
                     $index++;
@@ -298,7 +298,7 @@ class ImageSeeder extends Seeder
                 for ($i = 1; $i <= $item->imageCount; $i++) {
                     Image::create([
                         'product_color_id' => $item->id,
-                        'filename' => 'images/product/' . str_replace('{id}', $index, $item->imageBase),
+                        'filename' => 'public/images/product/' . str_replace('{id}', $index, $item->imageBase),
                         'sort_order' => $index,
                     ]);
                     $index++;
