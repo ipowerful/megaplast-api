@@ -11,6 +11,7 @@ use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\ParameterController;
 use App\Http\Controllers\ProductColorController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ContactController;
 
 
 /*
@@ -50,6 +51,7 @@ Route::get('admin/pcolors/{product_id}', [ProductColorController::class, 'colors
 //Route::put('admin/pcolors', [ProductColorController::class, 'create']);
 
 Route::apiResource('admin/images', ImageController::class);
+Route::apiResource('admin/contacts', ContactController::class);
 
 // ------- USER Routes------------
 Route::get('user/products', [ProductController::class, 'indexUser']);
@@ -58,3 +60,4 @@ Route::get('user/products/{product}', [ProductController::class, 'userShow']);
 Route::get('user/categories', [CategoryController::class, 'index']);
 Route::get('user/industries', [IndustryController::class, 'index']);
 Route::get('user/badges', [BadgeController::class, 'userIndex']);
+Route::get('user/contacts', [ContactController::class, 'index']);
