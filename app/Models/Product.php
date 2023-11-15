@@ -18,10 +18,7 @@ class Product extends Model
         'name_full',
 //        'slug',
         'article',
-//        'price',
-//        'price_old',
-//        'is_popular',
-//        'is_in_stock',
+        'is_popular',
         'measure_id',
         'category_id',
     ];
@@ -29,7 +26,6 @@ class Product extends Model
 
     protected $casts = [
         'is_popular' => 'boolean',
-        'is_in_stock' => 'boolean',
     ];
 
     public function measure(): belongsTo
