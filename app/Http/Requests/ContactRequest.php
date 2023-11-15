@@ -23,6 +23,18 @@ class ContactRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50|unique:contacts,name,' . $this->id,
+            'phone' => 'sometimes',
+            'email' => 'sometimes',
+            'address' => 'sometimes',
+            'telegram' => 'sometimes',
+            'whatsapp' => 'sometimes',
+            'time_from' => 'sometimes',
+            'days_from' => 'sometimes',
+            'time_to' => 'sometimes',
+            'days_to' => 'sometimes',
+            'map_lat' => 'sometimes',
+            'map_long' => 'sometimes',
+            'map_zoom' => 'sometimes',
         ];
     }
 
