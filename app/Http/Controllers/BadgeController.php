@@ -7,6 +7,7 @@ use App\Http\Requests\BadgeRequest;
 use App\Http\Resources\BadgeResource;
 use App\Http\Resources\BadgeUserResource;
 use App\Http\Controllers\BaseController as BaseController;
+use Illuminate\Support\Facades\DB;
 
 class BadgeController extends BaseController
 {
@@ -21,8 +22,12 @@ class BadgeController extends BaseController
 
     public function userIndex()
     {
-        $badges = BadgeUserResource::collection(Badge::all());
-        return $this->sendResponse($badges, 'Badges retrieved successfully.');
+        $badges = Badge::with('color')
+            ->join('badge_product', 'badges.id', '=', 'badge_product.badge_id')
+            ->get();
+
+        $badgesResource = BadgeUserResource::collection($badges);
+        return $this->sendResponse($badgesResource, 'Badges retrieved successfully.');
     }
 
     /**
