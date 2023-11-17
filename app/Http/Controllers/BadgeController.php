@@ -24,6 +24,7 @@ class BadgeController extends BaseController
     {
         $badges = Badge::with('color')
             ->join('badge_product', 'badges.id', '=', 'badge_product.badge_id')
+            ->distinct()
             ->get();
 
         $badgesResource = BadgeUserResource::collection($badges);
