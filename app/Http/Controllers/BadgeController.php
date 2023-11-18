@@ -22,13 +22,24 @@ class BadgeController extends BaseController
 
     public function userIndex()
     {
-        $badges = Badge::with('color')
-            ->join('badge_product', 'badges.id', '=', 'badge_product.badge_id')
-            ->distinct()
-            ->get();
+//        $badges = Badge::with('color')
+//            ->join('badge_product', 'badges.id', '=', 'badge_product.badge_id')
+//            ->distinct()
+//            ->get();
+
+        $sql = "SELECT b.id, b.name, c.slug AS color FROM badges b
+                LEFT JOIN (
+                    SELECT * FROM colors
+                ) c ON c.id = b.color_id
+                JOIN (
+                    SELECT * FROM badge_product
+                ) bc ON bc.badge_id = b.id
+                ";
+
+        $badges = DB::select($sql);
 
         $badgesResource = BadgeUserResource::collection($badges);
-        return $this->sendResponse($badgesResource, 'Badges retrieved successfully.');
+        return $this->sendResponse($badges, 'Badges retrieved successfully.');
     }
 
     /**
