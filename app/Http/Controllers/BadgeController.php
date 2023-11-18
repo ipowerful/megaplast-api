@@ -32,7 +32,7 @@ class BadgeController extends BaseController
                     SELECT * FROM colors
                 ) c ON c.id = b.color_id
                 JOIN (
-                    SELECT * FROM badge_product
+                    SELECT badge_id FROM badge_product GROUP BY badge_id
                 ) bc ON bc.badge_id = b.id
                 ";
 
