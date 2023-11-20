@@ -24,9 +24,11 @@ class CategoryRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'name' => 'required|string|max:50|unique:categories,name,' . $this->id,
-            'slug' => 'required|string|max:50|unique:categories,slug,' . $this->id,
-            'image' => 'required|string|unique:categories,image,' . $this->id,
+            'name' => 'sometimes|required|string|max:50|unique:categories,name,' . $this->id,
+            'slug' => 'sometimes|required|string|max:50|unique:categories,slug,' . $this->id,
+            'image' => 'sometimes|required|string|unique:categories,image,' . $this->id,
+            'seo_heading' => 'sometimes',
+            'seo_text' => 'sometimes',
         ];
 
         return $rules;

@@ -22,7 +22,11 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        //
+        Schema::table('products', function ($table) {
+            $table->string('slug', 100)->change();
+            $table->decimal('price', 9, 0)->change();
+            $table->decimal('price_old', 9, 0)->change();
+        });
     }
 
 
