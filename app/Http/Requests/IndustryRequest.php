@@ -26,6 +26,8 @@ class IndustryRequest extends FormRequest
             'text' => 'required|string|max:255',
             'slug' => 'required|string|max:50|unique:categories,slug,' . $this->id,
             'image' => 'required|string|unique:categories,image,' . $this->id,
+            'seo_heading' => 'sometimes',
+            'seo_text' => 'sometimes',
         ];
 
         return $rules;

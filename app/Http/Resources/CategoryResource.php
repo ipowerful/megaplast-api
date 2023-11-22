@@ -19,6 +19,8 @@ class CategoryResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'image' => $this->image,
+            'seo_heading' => $this->seo_heading,
+            'seo_text' => $this->seo_text,
             'parameters' => $this->parameters()->select('id', 'name')->get(),
         ];
     }
