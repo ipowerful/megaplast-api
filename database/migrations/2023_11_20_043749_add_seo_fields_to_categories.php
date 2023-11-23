@@ -11,8 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->string('seo_heading');
-            $table->text('seo_text');
+            $table->string('seo_heading')->nullable();
+            $table->text('seo_text')->nullable();
         });
     }
 
