@@ -28,6 +28,7 @@ class IndustryRequest extends FormRequest
             'image' => 'required|string|unique:categories,image,' . $this->id,
             'seo_heading' => 'sometimes',
             'seo_text' => 'sometimes',
+            'sorting' => 'sometimes|required|integer|min:1',
         ];
 
         return $rules;
@@ -42,6 +43,7 @@ class IndustryRequest extends FormRequest
             'slug.unique' => 'Укажите другой алиас. Введенное значение уже существует.',
             'image.required' => 'Заполните Изображение',
             'image.unique' => 'Укажите другое Изображение. Введенное значение уже существует.',
+            'sorting' => 'Неверное значение сортировки',
         ];
     }
 
