@@ -13,6 +13,7 @@ class Industry extends Model
         'image',
         'seo_heading',
         'seo_text',
+        'sorting',
     ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at', 'pivot'];
 

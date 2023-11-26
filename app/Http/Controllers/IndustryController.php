@@ -13,7 +13,7 @@ class IndustryController extends BaseController
      */
     public function index()
     {
-        $industries = Industry::all();
+        $industries = Industry::all()->sortBy('sorting');
         return $this->sendResponse($industries, 'Industries retrieved successfully.');
     }
 
