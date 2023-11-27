@@ -21,6 +21,7 @@ class Product extends Model
         'is_popular',
         'measure_id',
         'category_id',
+        'sorting',
     ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 

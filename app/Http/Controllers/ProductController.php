@@ -15,13 +15,13 @@ class ProductController extends BaseController
      */
     public function index()
     {
-        $products = ProductResourceAdmin::collection(Product::all());
+        $products = ProductResourceAdmin::collection(Product::orderBy('sorting')->get());
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
     public function indexUser()
     {
-        $products = ProductResourceUser::collection(Product::all());
+        $products = ProductResourceUser::collection(Product::orderBy('sorting')->get());
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 

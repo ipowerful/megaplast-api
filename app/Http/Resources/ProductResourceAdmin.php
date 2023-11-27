@@ -63,6 +63,8 @@ class ProductResourceAdmin extends JsonResource
 //            'colors' => ProductColorResource::collection($this->colors),
             'color_ids' => $color_ids,
             'color_slugs' => $color_slugs,
+
+            'sorting' => $this->sorting,
         ];
     }
 }

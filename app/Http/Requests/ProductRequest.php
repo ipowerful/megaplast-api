@@ -29,6 +29,7 @@ class ProductRequest extends FormRequest
             'measure_id' => 'sometimes|required|exists:measures,id',
             'category_id' => 'sometimes|required|integer',
             'is_popular' => 'sometimes|required|boolean',
+            'sorting' => 'sometimes|required|integer|min:1',
         ];
     }
 
@@ -44,6 +45,7 @@ class ProductRequest extends FormRequest
             'article.unique' => 'Укажите другой Артикул. Введенное значение уже существует.',
             'measure_id.required' => 'Выберите Единицы измерения',
             'category_id.required' => 'Выберите Категорию',
+            'sorting' => 'Неверное значение Сортировки',
         ];
     }
 }
