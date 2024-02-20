@@ -35,6 +35,7 @@ class ContactRequest extends FormRequest
             'map_lat' => 'sometimes',
             'map_long' => 'sometimes',
             'map_zoom' => 'sometimes',
+            'is_pickup' => 'sometimes|required|boolean',
         ];
     }
 
