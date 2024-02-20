@@ -36,6 +36,7 @@ class ContactRequest extends FormRequest
             'map_long' => 'sometimes',
             'map_zoom' => 'sometimes',
             'is_pickup' => 'sometimes|required|boolean',
+            'sorting' => 'sometimes|required|integer|min:1',
         ];
     }
 
@@ -44,6 +45,7 @@ class ContactRequest extends FormRequest
         return [
             'name.required' => 'Заполните наименование',
             'name.unique' => 'Укажите другое наименование. Введенное значние уже существует.',
+            'sorting' => 'Неверное значение Сортировки',
         ];
     }
 }

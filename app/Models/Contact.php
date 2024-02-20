@@ -22,6 +22,11 @@ class Contact extends Model
         'map_long',
         'map_zoom',
         'is_pickup',
+        'sorting',
     ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
+
+    protected $casts = [
+        'is_pickup' => 'boolean',
+    ];
 }

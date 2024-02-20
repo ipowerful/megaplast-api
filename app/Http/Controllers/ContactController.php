@@ -13,7 +13,7 @@ class ContactController extends BaseController
      */
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::orderBy('sorting')->get();
         return $this->sendResponse($contacts, 'Contacts retrieved successfully.');
     }
 
