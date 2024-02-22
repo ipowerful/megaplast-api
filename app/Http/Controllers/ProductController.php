@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResourceAdmin;
 use App\Http\Resources\ProductResourceUser;
+use App\Http\Resources\ProductResourceUserShow;
 use App\Models\Product;
 
 class ProductController extends BaseController
@@ -19,7 +20,7 @@ class ProductController extends BaseController
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
-    public function indexUser()
+    public function userIndex()
     {
         $products = ProductResourceUser::collection(Product::orderBy('sorting')->get());
         return $this->sendResponse($products, 'Products retrieved successfully.');
@@ -35,7 +36,12 @@ class ProductController extends BaseController
 
     public function userShow(Product $product)
     {
-        return $this->sendResponse($product, 'Product retrieved successfully.');
+        $output = [
+            'id' => $product->id,
+            'description' => $product->description,
+            'video_id' => $product->video_id,
+        ];
+        return $this->sendResponse($output, 'Product retrieved successfully.');
     }
 
 
