@@ -22,6 +22,8 @@ class Product extends Model
         'measure_id',
         'category_id',
         'sorting',
+        'description',
+        'video_id',
     ];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
