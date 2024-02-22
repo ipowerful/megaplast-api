@@ -30,7 +30,7 @@ class ProductResourceUser extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-//            'name_full' => $this->name_full,
+            'name_full' => $this->name_full,
             'article' => $this->article,
             'is_popular' => $this->is_popular,
             'measure_name' => $this->measure->name,
