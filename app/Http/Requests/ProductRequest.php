@@ -30,6 +30,8 @@ class ProductRequest extends FormRequest
             'category_id' => 'sometimes|required|integer',
             'is_popular' => 'sometimes|required|boolean',
             'sorting' => 'sometimes|required|integer|min:1',
+            'description' => 'sometimes',
+            'video_id' => 'sometimes',
         ];
     }
 

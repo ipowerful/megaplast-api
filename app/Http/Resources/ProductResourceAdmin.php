@@ -65,6 +65,8 @@ class ProductResourceAdmin extends JsonResource
             'color_slugs' => $color_slugs,
 
             'sorting' => $this->sorting,
+            'description' => $this->description,
+            'video_id' => $this->video_id,
         ];
     }
 }
