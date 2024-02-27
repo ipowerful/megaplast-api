@@ -31,4 +31,9 @@ class ProductColor extends Model
     {
         return $this->hasMany(Image::class)->orderBy('sort_order');
     }
+
+    public function has_main_images(): hasMany
+    {
+        return $this->hasMany(Image::class)->where('is_main', true)->orderBy('sort_order');
+    }
 }
