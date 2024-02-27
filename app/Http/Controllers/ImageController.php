@@ -27,6 +27,18 @@ class ImageController extends BaseController
         return $this->sendResponse($data, 'Изображение успешно добавлено');
     }
 
+    public function update(ImageStoreRequest $request, $id)
+    {
+        $result = Image::findOrFail($id)->update($request->validated());
+        if ($result) {
+            $productColor = Image::findOrFail($id);
+//            $productColorResource = new ProductColorResourceUser($productColor);
+            return $this->sendResponse($productColor, 'Изображение успешно изменено', 202);
+        } else {
+            return $this->sendError('Ошибка изменения Изображения', [], 500);
+        }
+    }
+
     public function destroy(Image $image)
     {
 //        if (File::exists($image->image)) {

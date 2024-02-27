@@ -50,7 +50,9 @@ Route::get('admin/pcolors/{product_id}', [ProductColorController::class, 'colors
 //Route::post('admin/pcolors', [ProductColorController::class, 'store']);
 //Route::put('admin/pcolors', [ProductColorController::class, 'create']);
 
+Route::patch('admin/images/{id}', [ImageController::class, 'update']);
 Route::apiResource('admin/images', ImageController::class);
+
 Route::apiResource('admin/contacts', ContactController::class);
 
 // ------- USER Routes------------

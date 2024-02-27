@@ -15,7 +15,7 @@ class ProductColorResourceUser extends JsonResource
     public function toArray(Request $request): array
     {
         $images = [];
-        foreach ($this->images as $image) {
+        foreach ($this->has_main_images as $image) {
             array_push($images, $image->filename);
         }
 
