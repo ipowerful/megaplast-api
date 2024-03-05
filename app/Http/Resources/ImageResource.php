@@ -18,6 +18,7 @@ class ImageResource extends JsonResource
             'id' => $this->id,
             'filename' => $this->filename,
             'is_main' => $this->is_main,
+            'sort_order' => $this->sort_order,
         ];
     }
 }

@@ -12,7 +12,7 @@ class ImageController extends BaseController
 {
     public function index()
     {
-        $data = Image::all();
+        $data = Image::orderBy('sort_order')->get();
         return $this->sendResponse($data, 'Images retrieved successfully');
     }
 
