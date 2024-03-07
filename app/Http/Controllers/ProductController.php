@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\ProductRequest;
+use App\Http\Resources\ProductColorResourceUser;
+use App\Http\Resources\ProductColorResourceUserFull;
 use App\Http\Resources\ProductResourceAdmin;
 use App\Http\Resources\ProductResourceUser;
-use App\Http\Resources\ProductResourceUserShow;
 use App\Models\Product;
 
 class ProductController extends BaseController
@@ -40,6 +41,7 @@ class ProductController extends BaseController
             'id' => $product->id,
             'description' => $product->description,
             'video_id' => $product->video_id,
+            'colors' => ProductColorResourceUserFull::collection($product->colors),
         ];
         return $this->sendResponse($output, 'Product retrieved successfully.');
     }
