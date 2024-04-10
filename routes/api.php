@@ -57,6 +57,7 @@ Route::apiResource('admin/contacts', ContactController::class);
 
 // ------- USER Routes------------
 Route::get('user/products', [ProductController::class, 'userIndex']);
+Route::get('user/products/popular', [ProductController::class, 'userPopularIndex']);
 Route::get('user/products/{product}', [ProductController::class, 'userShow']);
 
 Route::get('user/categories', [CategoryController::class, 'index']);
