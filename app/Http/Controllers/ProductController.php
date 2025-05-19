@@ -21,9 +21,19 @@ class ProductController extends BaseController
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
-    public function userIndex()
+    public function userIndex(ProductRequest $request)
     {
-        $products = ProductResourceUser::collection(Product::orderBy('sorting')->get());
+
+//        $isPopular = (boolean)$request->get('popular');
+//        echo($isPopular);
+//        exit;
+
+        $products = ProductResourceUser::collection(
+            Product::orderBy('sorting')
+//                ->where('is_popular', $isPopular)
+                ->where('is_popular', true)
+                ->get()
+        );
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
